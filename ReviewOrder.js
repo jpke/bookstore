@@ -26,31 +26,33 @@ export default class ReviewOrder extends React.Component {
       <View style={styles.container}>
         <View style={styles.selectedBook}>
           <Text style={styles.title}>Review Order</Text>
-            <View>
-              <Text>{this.props.bookToOrder.title}</Text>
+            <View style={styles.selectedBook}>
+              <Text style={styles.bookTitle}>{this.props.bookToOrder.title}</Text>
+              <Text style={styles.bookAuthor}>{this.props.bookToOrder.author}</Text>
             </View>
             <View>
-              <Text>{this.props.creditCardInfo.nameOnCard || "incomplete"}</Text>
-              <Text>{this.props.creditCardInfo.cardNumber || "incomplete"}</Text>
-              <Text>{this.props.creditCardInfo.securityCode || "incomplete"}</Text>
+              <Text>Payment Information</Text>
+              <Text>{this.props.creditCardInfo.nameOnCard}</Text>
+              <Text>{this.props.creditCardInfo.cardNumber}</Text>
+              <Text>{this.props.creditCardInfo.securityCode}</Text>
             </View>
             <View>
               <Text>{this.props.useDeliveryAddressAsBilling ? "Billing and Delivery Address" : "Billing Address"}</Text>
-              <Text>{this.props.billingAddress.lineOne || "incomplete"}</Text>
-              {this.props.billingAddress.lineTwo && <Text>{this.props.billingAddress.lineTwo || "incomplete"}</Text>
-              }
-              <Text>{this.props.billingAddress.city || "incomplete"}</Text>
-              <Text>{this.props.billingAddress.state || "incomplete"}</Text>
-              <Text>{this.props.billingAddress.zip || "incomplete"}</Text>
+              <Text>{this.props.billingAddress.lineOne}</Text>
+              <Text>{this.props.billingAddress.lineTwo && this.props.billingAddress.lineTwo}</Text>
+              <Text>{this.props.billingAddress.city}</Text>
+              <Text>{this.props.billingAddress.state}</Text>
+              <Text>{this.props.billingAddress.zip}</Text>
             </View>
             {!this.props.useDeliveryAddressAsBilling &&
               <View>
                 <Text>Delivery Address</Text>
-                <Text>{this.props.deliveryAddress.lineOne || "incomplete"}</Text>
-                {this.props.deliveryAddress.lineTwo && <Text>{this.props.deliveryAddress.lineTwo || "incomplete"}</Text>}
-                <Text>{this.props.deliveryAddress.city || "incomplete"}</Text>
-                <Text>{this.props.deliveryAddress.state || "incomplete"}</Text>
-                <Text>{this.props.deliveryAddress.zip || "incomplete"}</Text>
+                {console.log(this.props.deliveryAddress)}
+                <Text>{this.props.deliveryAddress.lineOne}</Text>
+                <Text>{this.props.deliveryAddress.lineTwo && this.props.deliveryAddress.lineTwo}</Text>
+                <Text>{this.props.deliveryAddress.city}</Text>
+                <Text>{this.props.deliveryAddress.state}</Text>
+                <Text>{this.props.deliveryAddress.zip}</Text>
               </View>
             }
         </View>
@@ -87,19 +89,15 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
   },
-  input: {
-    height: 50,
-    width: 250,
-    fontSize: 18,
-    borderWidth: 1,
-    borderColor: '#6799FF',
-    marginTop: 3,
+  bookTitle: {
+    fontSize: 20,
     padding: 5,
-    borderRadius: 5
+    marginTop: 10
   },
   bookAuthor: {
-    fontSize: 15,
-    padding: 5
+    fontSize: 18,
+    padding: 5,
+    marginBottom: 15
   },
   menu: {
     height: 200,

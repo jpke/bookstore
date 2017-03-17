@@ -19,24 +19,24 @@ export default class App extends React.Component {
     super();
     this.state = {
       userInfo: {
-        firstName: "1",
-        lastName: "1",
-        email: "1"
+        firstName: "",
+        lastName: "",
+        email: ""
       },
       deliveryAddress: {
-        lineOne: "1",
-        lineTwo: "1",
-        city: "1",
-        state: "1",
-        zip: "1"
+        lineOne: "",
+        lineTwo: "",
+        city: "",
+        state: "",
+        zip: ""
       },
       useDeliveryAddressAsBilling: false,
       billingAddress: {
-        lineOne: "1",
-        lineTwo: "1",
-        city: "1",
-        state: "1",
-        zip: "1"
+        lineOne: "",
+        lineTwo: "",
+        city: "",
+        state: "",
+        zip: ""
       },
       creditCardInfo: {
         nameOnCard: "",
@@ -110,7 +110,7 @@ export default class App extends React.Component {
     }
     else if(type === 'Billing') {
       this.setState({
-        deliveryAddress: info
+        billingAddress: info
       });
     }
     else if(type === 'PaymentInfo') {
