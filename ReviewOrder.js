@@ -6,14 +6,9 @@ import { StyleSheet,
          View
        } from 'react-native';
 
-export default class PaymentInfo extends React.Component {
+export default class ReviewOrder extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      nameOnCard: this.props.creditCardInfo.nameOnCard,
-      cardNumber: this.props.creditCardInfo.cardNumber,
-      securityCode: this.props.creditCardInfo.securityCode
-    };
   }
 
   navigate(routeName) {
@@ -26,42 +21,45 @@ export default class PaymentInfo extends React.Component {
     }
   }
 
-  updateState(text, item) {
-    item === 'nameOnCard' && this.setState({nameOnCard: text});
-    item === 'cardNumber' && this.setState({cardNumber: text});
-    item === 'securityCode' && this.setState({securityCode: text});
-  }
-
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.selectedBook}>
-          <Text style={styles.title}>Credit Card Info</Text>
+          <Text style={styles.title}>Review Order</Text>
             <View>
-              <TextInput style={styles.input}
-                value={this.state.nameOnCard}
-                placeholder="Name on Card"
-                onChangeText={(text) => this.updateState(text, 'nameOnCard')}/>
-              <TextInput style={styles.input}
-                value={this.state.cardNumber}
-                placeholder="Card Number"
-                onChangeText={(text) => this.updateState(text, 'cardNumber')}/>
-              <TextInput style={styles.input}
-                value={this.state.securityCode}
-                placeholder="Security Code"
-                onChangeText={(text) => this.updateState(text, 'securityCode')}/>
+              <Text>{this.props.bookToOrder.title}</Text>
             </View>
+            <View>
+              <Text>{this.props.creditCardInfo.nameOnCard || "incomplete"}</Text>
+              <Text>{this.props.creditCardInfo.cardNumber || "incomplete"}</Text>
+              <Text>{this.props.creditCardInfo.securityCode || "incomplete"}</Text>
+            </View>
+            <View>
+              <Text>{this.props.useDeliveryAddressAsBilling ? "Billing and Delivery Address" : "Billing Address"}</Text>
+              <Text>{this.props.billingAddress.lineOne || "incomplete"}</Text>
+              {this.props.billingAddress.lineTwo && <Text>{this.props.billingAddress.lineTwo || "incomplete"}</Text>
+              }
+              <Text>{this.props.billingAddress.city || "incomplete"}</Text>
+              <Text>{this.props.billingAddress.state || "incomplete"}</Text>
+              <Text>{this.props.billingAddress.zip || "incomplete"}</Text>
+            </View>
+            {!this.props.useDeliveryAddressAsBilling &&
+              <View>
+                <Text>Delivery Address</Text>
+                <Text>{this.props.deliveryAddress.lineOne || "incomplete"}</Text>
+                {this.props.deliveryAddress.lineTwo && <Text>{this.props.deliveryAddress.lineTwo || "incomplete"}</Text>}
+                <Text>{this.props.deliveryAddress.city || "incomplete"}</Text>
+                <Text>{this.props.deliveryAddress.state || "incomplete"}</Text>
+                <Text>{this.props.deliveryAddress.zip || "incomplete"}</Text>
+              </View>
+            }
         </View>
         <View style={styles.menu}>
           <TouchableHighlight style={styles.button} onPress={() => {
-              this.props.submitInfo({
-                nameOnCard: this.state.nameOnCard,
-                cardNumber: this.state.cardNumber,
-                securityCode: this.state.securityCode
-              }, 'PaymentInfo');
-              this.navigate('ReviewOrder');}
+              this.props.submitInfo(this.props.bookToOrder, 'SubmitOrder');
+              this.navigate('OrderHistory');}
           }>
-            <Text style={styles.menuItem}>Review Order</Text>
+            <Text style={styles.menuItem}>Submit Order</Text>
           </TouchableHighlight>
           <TouchableHighlight style={styles.button} onPress={() => this.props.navigator.pop()}>
             <Text style={styles.menuItem}>Back</Text>
@@ -85,7 +83,6 @@ const styles = StyleSheet.create({
   selectedBook: {
     alignItems: 'center',
     justifyContent: 'space-around',
-    height: 200,
   },
   title: {
     fontSize: 25,

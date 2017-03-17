@@ -14,7 +14,7 @@ export default class HomeScreen extends React.Component {
       {rowHasChanged: (r1, r2) => r1.title !== r2.title}
     )
     this.state = {
-      dataSource: dataSource.cloneWithRows(this.props.books)
+      dataSource: dataSource
     }
   }
 
@@ -32,7 +32,7 @@ export default class HomeScreen extends React.Component {
         <Text style={styles.subTitle}>Available Books</Text>
         <View style={styles.bookList}>
           <ListView
-            dataSource={this.state.dataSource}
+            dataSource={this.state.dataSource.cloneWithRows(this.props.books)}
             renderRow={(book) => {
               return (
                   <View>

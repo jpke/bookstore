@@ -6,36 +6,37 @@ import { StyleSheet,
          Navigator
        } from 'react-native';
 import HomeScreen from './HomeScreen';
-import Booklist from './Booklist';
 import Admin from './Admin';
 import Order from './Order';
 import OrderHistory from './OrderHistory';
 import UserInfo from './UserInfo';
 import AddressInfo from './AddressInfo';
 import PaymentInfo from './PaymentInfo';
+import ReviewOrder from './ReviewOrder';
 
 export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
       userInfo: {
-        firstName: "",
-        lastName: "",
-        email: ""
+        firstName: "1",
+        lastName: "1",
+        email: "1"
       },
       deliveryAddress: {
-        lineOne: "",
-        lineTwo: "",
-        city: "",
-        state: "",
-        zip: ""
+        lineOne: "1",
+        lineTwo: "1",
+        city: "1",
+        state: "1",
+        zip: "1"
       },
+      useDeliveryAddressAsBilling: false,
       billingAddress: {
-        lineOne: "",
-        lineTwo: "",
-        city: "",
-        state: "",
-        zip: ""
+        lineOne: "1",
+        lineTwo: "1",
+        city: "1",
+        state: "1",
+        zip: "1"
       },
       creditCardInfo: {
         nameOnCard: "",
@@ -65,25 +66,65 @@ export default class App extends React.Component {
           date: new Date(Date.now() - (1000*60*60*24))
         }
       ],
-      selectedTitle: "",
-      selectedAuthor: ""
+      bookToOrder: "",
+      newBook: {
+        title: "",
+        author: ""
+      }
     }
   }
 
   selectNewBook(newBook) {
     console.log("available book to order: ", newBook);
     this.setState({
-      selectedTitle: newBook.title,
-      selectedAuthor: newBook.author
+      bookToOrder: newBook
     })
   }
 
-  submitInfo(info, type) {
-    console.log("order info to save to app state: ", info, type);
-  }
-
-  addBook(newBook) {
-    console.log("new book to add to available books: ", newBook);
+  submitInfo(info, type, option) {
+    console.log("order info to save to app state: ", info, type, option);
+    if(type === 'AdminAddBook') {
+      let books = this.state.availableBooks.concat(info);
+      this.setState({
+        availableBooks: books
+      });
+    }
+    else if(type === 'UserInfo') {
+      this.setState({
+        userInfo: info
+      });
+    }
+    else if(type === 'Delivery') {
+      //use delivery address as billing address?
+      option ?
+        this.setState({
+          deliveryAddress: info,
+          billingAddress: info,
+          useDeliveryAddressAsBilling: true
+        })
+      :
+        this.setState({
+          deliveryAddress: info,
+          useDeliveryAddressAsBilling: false
+        })
+    }
+    else if(type === 'Billing') {
+      this.setState({
+        deliveryAddress: info
+      });
+    }
+    else if(type === 'PaymentInfo') {
+      this.setState({
+        creditCardInfo: info
+      });
+    }
+    else if(type === 'SubmitOrder') {
+      info.date = new Date();
+      let orders = this.state.orders.concat(info);
+      this.setState({
+        orders: orders
+      });
+    }
   }
 
   renderScene(route, navigator) {
@@ -95,13 +136,14 @@ export default class App extends React.Component {
    }
    if(route.name == 'Admin') {
      return <Admin navigator={navigator}
-            addBook={this.addBook}/>
+            newBook={this.state.newBook}
+            submitInfo={this.submitInfo.bind(this)}/>
    }
    if(route.name == 'Order') {
      return <Order navigator={navigator}
             submitOrderInfo={this.submitInfo}
-            selectedTitle={this.state.selectedTitle}
-            selectedAuthor={this.state.selectedAuthor}/>
+            selectedTitle={this.state.bookToOrder.title}
+            selectedAuthor={this.state.bookToOrder.author}/>
    }
    if(route.name == 'OrderHistory') {
      console.log("orders: ", this.state.orders);
@@ -122,6 +164,16 @@ export default class App extends React.Component {
    if(route.name == 'PaymentInfo') {
      return <PaymentInfo navigator={navigator}
             creditCardInfo={this.state.creditCardInfo}
+            submitInfo={this.submitInfo.bind(this)}/>
+   }
+   if(route.name == 'ReviewOrder') {
+     return <ReviewOrder navigator={navigator}
+            userInfo={this.state.userInfo}
+            bookToOrder={this.state.bookToOrder}
+            creditCardInfo={this.state.creditCardInfo}
+            useDeliveryAddressAsBilling={this.state.useDeliveryAddressAsBilling}
+            billingAddress={this.state.billingAddress}
+            deliveryAddress={this.state.deliveryAddress}
             submitInfo={this.submitInfo.bind(this)}/>
    }
   }

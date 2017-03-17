@@ -14,7 +14,7 @@ export default class OrderHistory extends React.Component {
       {rowHasChanged: (r1, r2) => r1.title !== r2.title}
     )
     this.state = {
-      dataSource: dataSource.cloneWithRows(this.props.orders)
+      dataSource: dataSource
     }
   }
   navigate(routeName) {
@@ -32,7 +32,7 @@ export default class OrderHistory extends React.Component {
         <Text style={styles.title}>Order History</Text>
         <View style={styles.bookList}>
           <ListView
-            dataSource={this.state.dataSource}
+            dataSource={this.state.dataSource.cloneWithRows(this.props.orders)}
             renderRow={(order) => {
               return (
                 <View>

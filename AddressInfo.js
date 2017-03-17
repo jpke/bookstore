@@ -51,19 +51,19 @@ export default class AddressInfo extends React.Component {
             <TextInput style={styles.input}
               value={this.state.lineTwo}
               placeholder="Address Line Two"
-              onChange={(text) => this.updateState(text, 'lineTwo')}/>
+              onChangeText={(text) => this.updateState(text, 'lineTwo')}/>
             <TextInput style={styles.input}
               value={this.state.city}
               placeholder="City"
-              onChange={(text) => this.updateState(text, 'city')}/>
+              onChangeText={(text) => this.updateState(text, 'city')}/>
             <TextInput style={styles.input}
               value={this.state.state}
               placeholder="State"
-              onChange={(text) => this.updateState(text, 'state')}/>
+              onChangeText={(text) => this.updateState(text, 'state')}/>
             <TextInput style={styles.input}
               value={this.state.zip}
               placeholder="Zip"
-              onChange={(text) => this.updateState(text, 'zip')}/>
+              onChangeText={(text) => this.updateState(text, 'zip')}/>
             {this.props.addressType === 'Delivery' &&
               <View styles={styles.switchContainer}>
                 <Text style={styles.switchLabel}>
@@ -83,7 +83,7 @@ export default class AddressInfo extends React.Component {
                 city: this.state.city,
                 state: this.state.state,
                 zip: this.state.zip
-              }, "AddressInfo", this.state.useAsBilling);
+              }, this.props.addressType, this.state.useAsBilling);
               this.navigate(this.state.useAsBilling ? 'PaymentInfo' : 'AddressInfo');}
           }>
             <Text style={styles.menuItem}>Next</Text>

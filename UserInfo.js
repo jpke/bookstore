@@ -45,11 +45,11 @@ export default class UserInfo extends React.Component {
             <TextInput style={styles.input}
               value={this.state.lastName}
               placeholder="Last Name"
-              onChange={(text) => this.updateState(text, 'lastName')}/>
+              onChangeText={(text) => this.updateState(text, 'lastName')}/>
             <TextInput style={styles.input}
-              value={this.state.lastName}
+              value={this.state.email}
               placeholder="email"
-              onChange={(text) => this.updateState(text, 'email')}/>
+              onChangeText={(text) => this.updateState(text, 'email')}/>
           </View>
         </View>
         <View style={styles.menu}>
