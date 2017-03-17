@@ -14,16 +14,22 @@ export default class Order extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Order Another Book</Text>
+        <View style={styles.selectedBook}>
+          <Text style={styles.title}>Order</Text>
+          <View>
+            <Text style={styles.bookTitle}>{this.props.selectedTitle}</Text>
+            <Text style={styles.bookAuthor}>{this.props.selectedAuthor}</Text>
+          </View>
+        </View>
         <View style={styles.menu}>
-          <TouchableHighlight style={styles.button} onPress={() => console.log("pressed")}>
-            <Text style={styles.menuItem}>Book Name</Text>
+          <TouchableHighlight style={styles.button} onPress={() => this.navigate('UserInfo')}>
+            <Text style={styles.menuItem}>Buy</Text>
           </TouchableHighlight>
           <TouchableHighlight style={styles.button} onPress={() => this.navigate('OrderHistory')}>
             <Text style={styles.menuItem}>Order History</Text>
           </TouchableHighlight>
           <TouchableHighlight style={styles.button} onPress={() => this.navigate('HomeScreen')}>
-            <Text style={styles.menuItem}>Back</Text>
+            <Text style={styles.menuItem}>Home</Text>
           </TouchableHighlight>
         </View>
       </View>
@@ -38,8 +44,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
   },
+  selectedBook: {
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    height: 200,
+  },
   title: {
     fontSize: 25,
+  },
+  bookTitle: {
+    fontSize: 20,
+    padding: 5
+  },
+  bookAuthor: {
+    fontSize: 15,
+    padding: 5
   },
   menu: {
     height: 200,

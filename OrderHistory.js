@@ -1,7 +1,22 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { StyleSheet,
+         Text,
+         TouchableHighlight,
+         View,
+         ListView
+       } from 'react-native';
+import formatAMPM from './dateFormatter';
 
 export default class OrderHistory extends React.Component {
+  constructor(props) {
+    super(props)
+    const dataSource = new ListView.DataSource(
+      {rowHasChanged: (r1, r2) => r1.title !== r2.title}
+    )
+    this.state = {
+      dataSource: dataSource.cloneWithRows(this.props.orders)
+    }
+  }
   navigate(routeName) {
     if(routeName === "HomeScreen") {
       this.props.navigator.popToTop(0);
@@ -15,15 +30,28 @@ export default class OrderHistory extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Order History</Text>
+        <View style={styles.bookList}>
+          <ListView
+            dataSource={this.state.dataSource}
+            renderRow={(order) => {
+              return (
+                <View>
+                  <View style={styles.rowContainer}>
+                    <Text style={styles.bookTitle}>{order.title}</Text>
+                    <Text style={styles.bookAuthor}>{order.author}</Text>
+                    <Text style={styles.bookDate}>{"Ordered " + formatAMPM(order.date) + " on " + order.date.toDateString()}</Text>
+                  </View>
+                  <View style={styles.separator}/>
+                </View>
+                )}}
+          />
+        </View>
         <View style={styles.menu}>
-          <TouchableHighlight style={styles.button} onPress={() => console.log("pressed")}>
-            <Text style={styles.menuItem}>Book Name</Text>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.button} onPress={() => console.log("pressed")}>
-            <Text style={styles.menuItem}>Your Info</Text>
+          <TouchableHighlight style={styles.button} onPress={() => this.props.navigator.pop()}>
+            <Text style={styles.menuItem}>Back</Text>
           </TouchableHighlight>
           <TouchableHighlight style={styles.button} onPress={() => this.navigate('HomeScreen')}>
-            <Text style={styles.menuItem}>Back</Text>
+            <Text style={styles.menuItem}>Home</Text>
           </TouchableHighlight>
         </View>
       </View>
@@ -41,8 +69,36 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
   },
+  bookList: {
+    height: 300,
+    width: 300,
+    justifyContent: 'space-between',
+  },
+  rowContainer: {
+    padding: 5,
+    backgroundColor: '#ffcd67',
+    borderRadius: 5,
+    marginTop: 5,
+    marginBottom: 5
+  },
+  bookTitle: {
+    fontSize: 15,
+    padding: 5
+  },
+  bookAuthor: {
+    fontSize: 12,
+    padding: 5
+  },
+  bookDate: {
+    fontSize: 12,
+    padding: 5
+  },
+  separator: {
+    height: 1,
+    backgroundColor: '#dddddd'
+  },
   menu: {
-    height: 200,
+    height: 100,
     justifyContent: 'space-around',
     alignItems: 'center',
   },

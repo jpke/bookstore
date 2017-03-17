@@ -1,27 +1,55 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { StyleSheet,
+         Text,
+         TouchableHighlight,
+         View,
+         ListView
+       } from 'react-native';
 
 export default class HomeScreen extends React.Component {
+  constructor(props) {
+    super(props)
+    console.log("props: ", this.props);
+    const dataSource = new ListView.DataSource(
+      {rowHasChanged: (r1, r2) => r1.title !== r2.title}
+    )
+    this.state = {
+      dataSource: dataSource.cloneWithRows(this.props.books)
+    }
+  }
+
+
   navigate(routeName) {
-    console.log("routeName: ", routeName);
     this.props.navigator.push({
       name: routeName
     });
   }
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Welcome to the BookStore</Text>
+        <Text style={styles.subTitle}>Available Books</Text>
         <View style={styles.bookList}>
-          <Text style={styles.menuItem}>Your Books</Text>
-          {this.props.books.map((book, index) => {
-            return (
-              <View key={index} style={styles.book}>
-                <Text>{book.title}</Text>
-                <Text>{book.author}</Text>
-              </View>
-            )
-          })}
+          <ListView
+            dataSource={this.state.dataSource}
+            renderRow={(book) => {
+              return (
+                  <View>
+                    <TouchableHighlight style={styles.rowContainer}
+                        onPress={() => {
+                          this.props.selectBook(book)
+                          this.navigate('Order')
+                        }}>
+                      <View>
+                        <Text style={styles.bookTitle}>{book.title}</Text>
+                        <Text style={styles.bookAuthor}>{book.author}</Text>
+                      </View>
+                    </TouchableHighlight>
+                    <View style={styles.separator}/>
+                  </View>
+                )}}
+          />
         </View>
         <View style={styles.menu}>
           <TouchableHighlight style={styles.button} onPress={() => this.navigate('OrderHistory')}>
@@ -46,16 +74,32 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
   },
+  subTitle: {
+    fontSize: 20
+  },
   bookList: {
     height: 300,
+    width: 300,
     justifyContent: 'space-between',
   },
-  book: {
-    height: 20,
-    alignItems: 'stretch',
+  rowContainer: {
+    padding: 5,
     backgroundColor: '#ffcd67',
+    borderRadius: 5,
+    marginTop: 5,
+    marginBottom: 5
+  },
+  bookTitle: {
+    fontSize: 15,
     padding: 5
-
+  },
+  bookAuthor: {
+    fontSize: 12,
+    padding: 5
+  },
+  separator: {
+    height: 1,
+    backgroundColor: '#dddddd'
   },
   menu: {
     height: 100,
