@@ -16,12 +16,13 @@ export default class UserInfo extends React.Component {
     };
   }
 
-  navigate(routeName) {
+  navigate(routeName, option) {
     if(routeName === "HomeScreen") {
       this.props.navigator.popToTop(0);
     } else {
       this.props.navigator.push({
-        name: routeName
+        name: routeName,
+        option: option
       });
     }
   }
@@ -58,7 +59,7 @@ export default class UserInfo extends React.Component {
                 lastName: this.state.lastName,
                 email: this.state.email
               }, "UserInfo");
-              this.navigate('PaymentInfo');}
+              this.navigate('AddressInfo', 'delivery');}
           }>
             <Text style={styles.menuItem}>Next</Text>
           </TouchableHighlight>

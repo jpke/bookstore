@@ -11,6 +11,7 @@ import Admin from './Admin';
 import Order from './Order';
 import OrderHistory from './OrderHistory';
 import UserInfo from './UserInfo';
+import AddressInfo from './AddressInfo';
 import PaymentInfo from './PaymentInfo';
 
 export default class App extends React.Component {
@@ -110,6 +111,12 @@ export default class App extends React.Component {
    if(route.name == 'UserInfo') {
      return <UserInfo navigator={navigator}
             userInfo={this.state.userInfo}
+            submitInfo={this.submitInfo.bind(this)}/>
+   }
+   if(route.name == 'AddressInfo') {
+     return <AddressInfo navigator={navigator}
+            addressType={route.option === 'delivery' ? 'Delivery' : 'Billing'}
+            address={route.option === 'delivery' ? this.state.deliveryAddress : this.state.billingAddress}
             submitInfo={this.submitInfo.bind(this)}/>
    }
    if(route.name == 'PaymentInfo') {
