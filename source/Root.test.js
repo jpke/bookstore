@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactNative from 'react-native';
-import App from './App';
+import Root from './Root';
 
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <App />
+    <Root />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 })

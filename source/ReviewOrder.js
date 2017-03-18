@@ -47,7 +47,6 @@ export default class ReviewOrder extends React.Component {
             {!this.props.useDeliveryAddressAsBilling &&
               <View>
                 <Text>Delivery Address</Text>
-                {console.log(this.props.deliveryAddress)}
                 <Text>{this.props.deliveryAddress.lineOne}</Text>
                 <Text>{this.props.deliveryAddress.lineTwo && this.props.deliveryAddress.lineTwo}</Text>
                 <Text>{this.props.deliveryAddress.city}</Text>

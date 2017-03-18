@@ -27,6 +27,5 @@ it('renders correctly', () => {
       ]}
       selectBook={selectNewBook}/>
   ).toJSON();
-  console.log(tree)
   expect(tree).toMatchSnapshot();
 })
