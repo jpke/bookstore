@@ -5,14 +5,14 @@ import { StyleSheet,
          View,
          Navigator
        } from 'react-native';
-import HomeScreen from './HomeScreen';
-import Admin from './Admin';
-import Order from './Order';
-import OrderHistory from './OrderHistory';
-import UserInfo from './UserInfo';
-import AddressInfo from './AddressInfo';
-import PaymentInfo from './PaymentInfo';
-import ReviewOrder from './ReviewOrder';
+import HomeScreen from './source/HomeScreen';
+import Admin from './source/Admin';
+import Order from './source/Order';
+import OrderHistory from './source/OrderHistory';
+import UserInfo from './source/UserInfo';
+import AddressInfo from './source/AddressInfo';
+import PaymentInfo from './source/PaymentInfo';
+import ReviewOrder from './source/ReviewOrder';
 
 export default class App extends React.Component {
   constructor() {

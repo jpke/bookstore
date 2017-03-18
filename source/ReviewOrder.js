@@ -87,12 +87,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   title: {
-    fontSize: 25,
+    fontSize: 35,
+    color: 'orange'
   },
   bookTitle: {
     fontSize: 20,
     padding: 5,
-    marginTop: 10
+    marginTop: 15
   },
   bookAuthor: {
     fontSize: 18,
