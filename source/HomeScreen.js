@@ -9,7 +9,6 @@ import { StyleSheet,
 export default class HomeScreen extends React.Component {
   constructor(props) {
     super(props)
-    console.log("props: ", this.props);
     const dataSource = new ListView.DataSource(
       {rowHasChanged: (r1, r2) => r1.title !== r2.title}
     )

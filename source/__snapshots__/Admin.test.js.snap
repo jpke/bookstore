@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flex": 1,
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 25,
+      }
+    }
+  >
+    Admin
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 20,
+      }
+    }
+  >
+    Add to Available Books
+  </Text>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 25,
+        }
+      }
+    >
+      Add Book
+    </Text>
+    <View>
+      <TextInput
+        onChangeText={[Function]}
+        placeholder="Title"
+        style={
+          Object {
+            "borderColor": "#6799FF",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "fontSize": 18,
+            "height": 50,
+            "marginTop": 3,
+            "padding": 5,
+            "width": 250,
+          }
+        }
+        value={undefined}
+      />
+      <TextInput
+        onChangeText={[Function]}
+        placeholder="Author"
+        style={
+          Object {
+            "borderColor": "#6799FF",
+            "borderRadius": 5,
+            "borderWidth": 1,
+            "fontSize": 18,
+            "height": 50,
+            "marginTop": 3,
+            "padding": 5,
+            "width": 250,
+          }
+        }
+        value={undefined}
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 200,
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6799FF",
+            "borderRadius": 10,
+            "margin": 5,
+            "padding": 10,
+            "width": 250,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+          }
+        }
+      >
+        Add Book
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6799FF",
+            "borderRadius": 10,
+            "margin": 5,
+            "padding": 10,
+            "width": 250,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+          }
+        }
+      >
+        Back
+      </Text>
+    </View>
+  </View>
+</View>
+`;
