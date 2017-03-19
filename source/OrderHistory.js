@@ -29,7 +29,12 @@ export default class OrderHistory extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Order History</Text>
+        <View style={styles.header}>
+          <View style={{flex: 1}}>
+          </View>
+          <Text style={styles.title}>Order History</Text>
+          <View style={{flex: 1}}></View>
+        </View>
         <View style={styles.bookList}>
           <ListView
             dataSource={this.state.dataSource.cloneWithRows(this.props.orders)}
@@ -62,17 +67,31 @@ export default class OrderHistory extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
+  header: {
+    marginTop: 10,
+    marginBottom: 10,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center'
+  },
   title: {
-    fontSize: 25,
+    flex: 4,
+    fontSize: 40,
+    color: '#ffcd67',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4,
+    textAlign: 'center'
   },
   bookList: {
-    height: 300,
-    width: 300,
-    justifyContent: 'space-between',
+    flex: 5,
+    // width: 320,
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
   rowContainer: {
     padding: 5,
@@ -83,7 +102,8 @@ const styles = StyleSheet.create({
   },
   bookTitle: {
     fontSize: 15,
-    padding: 5
+    padding: 5,
+    width: 320,
   },
   bookAuthor: {
     fontSize: 12,
@@ -98,7 +118,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#dddddd'
   },
   menu: {
-    height: 100,
+    flex: 1,
+    flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
   },
@@ -108,9 +129,10 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#6799FF',
-    width: 250,
+    // flex: 1,
+    width: 150,
     padding: 10,
-    margin: 5,
+    margin: 10,
     borderRadius: 10,
     alignItems: 'center',
   }

@@ -33,11 +33,14 @@ export default class Admin extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Admin</Text>
-        <Text style={styles.subTitle}>Add to Available Books</Text>
+        <View style={styles.header}>
+          <View style={{flex: 1}}></View>
+          <Text style={styles.title}>Admin</Text>
+          <View style={{flex: 1}}></View>
+        </View>
         <View style={styles.inputContainer}>
-          <Text style={styles.title}>Add Book</Text>
-          <View>
+          <View style={styles.innerInputContainer}>
+            <Text style={styles.subTitle}>Add to Available Books</Text>
             <TextInput style={styles.input}
               value={this.state.firstName}
               placeholder="Title"
@@ -47,8 +50,12 @@ export default class Admin extends React.Component {
               placeholder="Author"
               onChangeText={(text) => this.updateState(text, 'author')}/>
           </View>
+          <View style={{flex: 1}}></View>
         </View>
         <View style={styles.menu}>
+          <TouchableHighlight style={styles.button} onPress={() => this.navigate('HomeScreen')}>
+            <Text style={styles.menuItem}>Back</Text>
+          </TouchableHighlight>
           <TouchableHighlight style={styles.button} onPress={() => {
               this.props.submitInfo({
                 title: this.state.title,
@@ -57,9 +64,6 @@ export default class Admin extends React.Component {
               this.navigate('HomeScreen');}
           }>
             <Text style={styles.menuItem}>Add Book</Text>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.button} onPress={() => this.navigate('HomeScreen')}>
-            <Text style={styles.menuItem}>Back</Text>
           </TouchableHighlight>
         </View>
       </View>
@@ -70,35 +74,57 @@ export default class Admin extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
-  title: {
-    fontSize: 25,
+  header: {
+    marginTop: 10,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'flex-start'
   },
-  subTitle: {
-    fontSize: 20
+  title: {
+    flex: 1,
+    fontSize: 40,
+    color: '#ffcd67',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4,
+    textAlign: 'center'
   },
   inputContainer: {
-    alignItems: 'center',
-    justifyContent: 'space-around',
+    flex: 5,
+    justifyContent: 'center',
   },
-  title: {
-    fontSize: 25,
+  innerInputContainer: {
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  subTitle: {
+    flex: 1,
+    fontSize: 30,
+    color: '#fff',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4,
   },
   input: {
-    height: 50,
-    width: 250,
+    flex: 1,
+    maxHeight: 70,
+    width: 320,
     fontSize: 18,
     borderWidth: 1,
-    borderColor: '#6799FF',
-    marginTop: 3,
+    borderColor: '#ffcd67',
+    backgroundColor: '#ffcd67',
+    margin: 8,
     padding: 5,
     borderRadius: 5
   },
   menu: {
-    height: 200,
+    flex: 1,
+    flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
   },
@@ -108,9 +134,9 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#6799FF',
-    width: 250,
+    width: 150,
     padding: 10,
-    margin: 5,
+    margin: 10,
     borderRadius: 10,
     alignItems: 'center',
   }
