@@ -76,15 +76,14 @@ export default class Root extends React.Component {
   }
 
   selectNewBook(newBook) {
-    console.log("available book to order: ", newBook);
     this.setState({
       bookToOrder: newBook
     })
   }
 
   submitInfo(info, type, option) {
-    console.log("order info to save to app state: ", info, type, option);
     if(type === 'AdminAddBook') {
+      if(info.title === "" || info.author === "") return;
       let books = this.state.availableBooks.concat(info);
       this.setState({
         availableBooks: books
@@ -122,8 +121,11 @@ export default class Root extends React.Component {
     else if(type === 'SubmitOrder') {
       info.date = new Date();
       let orders = this.state.orders.concat(info);
+      let books = this.state.availableBooks.slice();
+      books = books.filter(book => book.title !== info.title)
       this.setState({
-        orders: orders
+        orders: orders,
+        availableBooks: books
       });
     }
   }

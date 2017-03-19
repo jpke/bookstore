@@ -25,10 +25,12 @@ export default class Order extends React.Component {
             <View style={{flex: 1}}></View>
           </View>
           <View style={styles.bookInfo}>
-            <View style={styles.innerBookInfo}>
-              <Text style={styles.bookTitle}>{this.props.selectedTitle}</Text>
-              <Text style={styles.bookAuthor}>{this.props.selectedAuthor}</Text>
-            </View>
+            <TouchableHighlight style={styles.innerBookInfo} onPress={() => this.navigate('UserInfo')}>
+              <View style={{alignItems: 'center'}}>
+                <Text style={styles.bookTitle}>{this.props.selectedTitle}</Text>
+                <Text style={styles.bookAuthor}>{this.props.selectedAuthor}</Text>
+              </View>
+            </TouchableHighlight>
           </View>
         </View>
         <View style={styles.menu}>
@@ -51,7 +53,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   header: {
-    marginTop: 10,
+    marginTop: 15,
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -75,17 +77,22 @@ const styles = StyleSheet.create({
     flex: 3,
   },
   innerBookInfo: {
-    backgroundColor: '#ffcd67',
+    backgroundColor: 'rgba(255,205,103,0.8)',
+    width: 320,
     borderRadius: 5,
     padding: 10,
     alignItems: 'center',
   },
   bookTitle: {
-    fontSize: 25,
+    fontSize: 30,
     padding: 5,
+    color: '#fff',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4
   },
   bookAuthor: {
-    fontSize: 20,
+    fontSize: 26,
     padding: 5,
   },
   menu: {

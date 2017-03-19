@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   header: {
-    marginTop: 10,
+    marginTop: 15,
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -155,7 +155,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   switchLabel: {
-    color: '#ffcd67',
+    fontSize: 18,
+    color: '#fff',
     textShadowColor: 'black',
     textShadowOffset: {width: 1, height: 1},
     textShadowRadius: 4,

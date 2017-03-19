@@ -3,18 +3,12 @@ import { StyleSheet,
          Text,
          TouchableHighlight,
          View,
-         ListView,
+         ScrollView,
        } from 'react-native';
 
 export default class HomeScreen extends React.Component {
   constructor(props) {
     super(props)
-    const dataSource = new ListView.DataSource(
-      {rowHasChanged: (r1, r2) => r1.title !== r2.title}
-    )
-    this.state = {
-      dataSource: dataSource
-    }
   }
 
 
@@ -27,31 +21,32 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Pocket BookStore</Text>
-        <Text style={styles.subTitle}>Select from Available Books</Text>
-          <View style={styles.bookList}>
-
-            <ListView
-              dataSource={this.state.dataSource.cloneWithRows(this.props.books)}
-              renderRow={(book) => {
-                return (
-                    <View>
-                      <TouchableHighlight style={styles.rowContainer}
-                          onPress={() => {
-                            this.props.selectBook(book)
-                            this.navigate('Order')
-                          }}>
-                        <View>
-                          <Text style={styles.bookTitle}>{book.title}</Text>
-                          <Text style={styles.bookAuthor}>{book.author}</Text>
-                        </View>
-                      </TouchableHighlight>
-                      <View style={styles.separator}/>
-                    </View>
-                  )}}
-            />
-
-          </View>
+        <View style={styles.header}>
+          <Text style={styles.title}>Pocket BookStore</Text>
+          <Text style={styles.subTitle}>Select from Available Books</Text>
+        </View>
+        <View style={styles.bookList}>
+          <ScrollView style={styles.bookList}>
+            {this.props.books.map((book, index) => {
+              return (
+                  <View key={index}>
+                    <TouchableHighlight style={styles.rowContainer}
+                        onPress={() => {
+                          this.props.selectBook(book)
+                          this.navigate('Order')
+                        }}>
+                      <View>
+                        <Text style={styles.bookTitle}>{book.title}</Text>
+                        <Text style={styles.bookAuthor}>{book.author}</Text>
+                      </View>
+                    </TouchableHighlight>
+                    <View style={styles.separator}/>
+                  </View>
+                )
+              })
+            }
+          </ScrollView>
+        </View>
         <View style={styles.menu}>
           <TouchableHighlight style={styles.button} onPress={() => this.navigate('OrderHistory')}>
             <Text style={styles.menuItem}>Orders</Text>
@@ -71,17 +66,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
   },
+  header: {
+    marginTop: 15,
+    marginBottom: 10,
+    flex: 2.2,
+    alignItems: 'center'
+  },
   title: {
-    marginTop: 45,
-    fontSize: 35,
+    fontSize: 40,
     flex: 1.5,
+    alignItems: 'flex-end',
     color: '#ffcd67',
     textShadowColor: 'black',
     textShadowOffset: {width: 1, height: 1},
     textShadowRadius: 4
   },
   subTitle: {
-    fontSize: 20,
+    fontSize: 30,
     flex: 1,
     color: '#fff',
     textShadowColor: 'black',
@@ -93,13 +94,15 @@ const styles = StyleSheet.create({
     width: 320,
   },
   rowContainer: {
-    padding: 1,
+    flex: 1,
+    marginTop: 6,
+    marginBottom: 6,
+    padding: 6,
+    backgroundColor: 'rgba(255,205,103,0.8)',
     borderRadius: 5,
-    marginTop: 5,
-    marginBottom: 5,
   },
   bookTitle: {
-    fontSize: 17,
+    fontSize: 22,
     padding: 5,
     color: '#fff',
     textShadowColor: 'black',
@@ -107,12 +110,8 @@ const styles = StyleSheet.create({
     textShadowRadius: 4
   },
   bookAuthor: {
-    fontSize: 14,
+    fontSize: 18,
     padding: 5,
-    color: '#fff',
-    textShadowColor: 'black',
-    textShadowOffset: {width: 1, height: 1},
-    textShadowRadius: 4
   },
   separator: {
     height: 1,

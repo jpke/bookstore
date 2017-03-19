@@ -3,19 +3,13 @@ import { StyleSheet,
          Text,
          TouchableHighlight,
          View,
-         ListView
+         ScrollView
        } from 'react-native';
 import formatAMPM from './dateFormatter';
 
 export default class OrderHistory extends React.Component {
   constructor(props) {
     super(props)
-    const dataSource = new ListView.DataSource(
-      {rowHasChanged: (r1, r2) => r1.title !== r2.title}
-    )
-    this.state = {
-      dataSource: dataSource
-    }
   }
   navigate(routeName) {
     if(routeName === "HomeScreen") {
@@ -36,11 +30,10 @@ export default class OrderHistory extends React.Component {
           <View style={{flex: 1}}></View>
         </View>
         <View style={styles.bookList}>
-          <ListView
-            dataSource={this.state.dataSource.cloneWithRows(this.props.orders)}
-            renderRow={(order) => {
+          <ScrollView>
+            {this.props.orders.map((order, index) => {
               return (
-                <View>
+                <View key={index}>
                   <View style={styles.rowContainer}>
                     <Text style={styles.bookTitle}>{order.title}</Text>
                     <Text style={styles.bookAuthor}>{order.author}</Text>
@@ -48,8 +41,10 @@ export default class OrderHistory extends React.Component {
                   </View>
                   <View style={styles.separator}/>
                 </View>
-                )}}
-          />
+                )
+              })
+            }
+          </ScrollView>
         </View>
         <View style={styles.menu}>
           <TouchableHighlight style={styles.button} onPress={() => this.props.navigator.pop()}>
@@ -89,28 +84,32 @@ const styles = StyleSheet.create({
   },
   bookList: {
     flex: 5,
-    // width: 320,
+    width: 320,
     alignItems: 'center',
     justifyContent: 'space-around',
   },
   rowContainer: {
-    padding: 5,
-    backgroundColor: '#ffcd67',
+    flex: 1,
+    marginTop: 6,
+    marginBottom: 6,
+    padding: 6,
+    backgroundColor: 'rgba(255,205,103,0.8)',
     borderRadius: 5,
-    marginTop: 5,
-    marginBottom: 5
   },
   bookTitle: {
-    fontSize: 15,
+    fontSize: 22,
     padding: 5,
-    width: 320,
+    color: '#fff',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4
   },
   bookAuthor: {
-    fontSize: 12,
-    padding: 5
+    fontSize: 18,
+    padding: 5,
   },
   bookDate: {
-    fontSize: 12,
+    fontSize: 15,
     padding: 5
   },
   separator: {

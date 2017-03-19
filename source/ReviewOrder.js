@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   header: {
-    marginTop: 10,
+    marginTop: 15,
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-around',
