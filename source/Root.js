@@ -3,7 +3,8 @@ import { StyleSheet,
          Text,
          TouchableHighlight,
          View,
-         Navigator
+         Navigator,
+         Image
        } from 'react-native';
 import HomeScreen from './HomeScreen';
 import Admin from './Admin';
@@ -178,10 +179,15 @@ export default class Root extends React.Component {
   render() {
    return (
      <View style={styles.container}>
-       <Navigator
-         initialRoute={{name: 'HomeScreen'}}
-         renderScene={this.renderScene.bind(this)}
-       />
+       <Image source={require('./images/books.png')}
+         style={styles.books}>
+         <View style={styles.container}>
+           <Navigator
+             initialRoute={{name: 'HomeScreen'}}
+             renderScene={this.renderScene.bind(this)}
+           />
+         </View>
+       </Image>
      </View>
    );
 }
@@ -190,5 +196,10 @@ export default class Root extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1
-  }
+  },
+  books: {
+    flex: 1,
+    width: null,
+    resizeMode: 'cover'
+  },
 });

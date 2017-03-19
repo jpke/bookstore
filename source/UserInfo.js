@@ -36,8 +36,16 @@ export default class UserInfo extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.inputContainer}>
-          <Text style={styles.title}>Customer Info</Text>
-          <View>
+          <View style={styles.header}>
+            <View style={{flex: 1}}>
+              <TouchableHighlight style={styles.homeButton} onPress={() => this.navigate('HomeScreen')}>
+                <Text style={styles.menuItem}>Home</Text>
+              </TouchableHighlight>
+            </View>
+            <Text style={styles.title}>Customer Info</Text>
+            <View style={{flex: 1}}></View>
+          </View>
+          <View style={styles.inputForm}>
             <TextInput style={styles.input}
               value={this.state.firstName}
               placeholder="First Name"
@@ -53,6 +61,9 @@ export default class UserInfo extends React.Component {
           </View>
         </View>
         <View style={styles.menu}>
+          <TouchableHighlight style={styles.button} onPress={() => this.props.navigator.pop()}>
+            <Text style={styles.menuItem}>Back</Text>
+          </TouchableHighlight>
           <TouchableHighlight style={styles.button} onPress={() => {
               this.props.submitInfo({
                 firstName: this.state.firstName,
@@ -63,12 +74,6 @@ export default class UserInfo extends React.Component {
           }>
             <Text style={styles.menuItem}>Next</Text>
           </TouchableHighlight>
-          <TouchableHighlight style={styles.button} onPress={() => this.props.navigator.pop()}>
-            <Text style={styles.menuItem}>Back</Text>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.button} onPress={() => this.navigate('HomeScreen')}>
-            <Text style={styles.menuItem}>Home</Text>
-          </TouchableHighlight>
         </View>
       </View>
     );
@@ -78,25 +83,44 @@ export default class UserInfo extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'space-around',
+  },
+  header: {
+    marginTop: 10,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'flex-start'
   },
   inputContainer: {
+    flex: 6,
     alignItems: 'center',
     justifyContent: 'space-around',
-    height: 200,
   },
   title: {
-    fontSize: 25,
+    flex: 2,
+    fontSize: 40,
+    color: '#ffcd67',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4,
+    textAlign: 'center'
+  },
+  inputForm: {
+    flex: 3,
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
   input: {
-    height: 50,
+    flex: 1,
+    maxHeight: 70,
     width: 250,
     fontSize: 18,
     borderWidth: 1,
-    borderColor: '#6799FF',
-    marginTop: 3,
+    borderColor: '#ffcd67',
+    backgroundColor: '#ffcd67',
+    margin: 10,
     padding: 5,
     borderRadius: 5
   },
@@ -109,7 +133,8 @@ const styles = StyleSheet.create({
     padding: 5
   },
   menu: {
-    height: 200,
+    flex: 1,
+    flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
   },
@@ -117,11 +142,20 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#FFFFFF',
   },
+  homeButton: {
+    backgroundColor: '#6799FF',
+    width: 80,
+    margin: 5,
+    paddingTop: 10,
+    paddingBottom: 10,
+    borderRadius: 10,
+    alignItems: 'center',
+  },
   button: {
     backgroundColor: '#6799FF',
-    width: 250,
+    width: 150,
     padding: 10,
-    margin: 5,
+    margin: 10,
     borderRadius: 10,
     alignItems: 'center',
   }

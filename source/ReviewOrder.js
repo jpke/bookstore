@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet,
+         ScrollView,
          Text,
          TextInput,
          TouchableHighlight,
@@ -25,48 +26,104 @@ export default class ReviewOrder extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.selectedBook}>
-          <Text style={styles.title}>Review Order</Text>
-            <View style={styles.selectedBook}>
-              <Text style={styles.bookTitle}>{this.props.bookToOrder.title}</Text>
-              <Text style={styles.bookAuthor}>{this.props.bookToOrder.author}</Text>
+          <View style={styles.header}>
+            <View style={{flex: 1}}>
+              <TouchableHighlight style={styles.homeButton} onPress={() => this.navigate('HomeScreen')}>
+                <Text style={styles.menuItem}>Home</Text>
+              </TouchableHighlight>
             </View>
-            <View>
-              <Text>Payment Information</Text>
-              <Text>{this.props.creditCardInfo.nameOnCard}</Text>
-              <Text>{this.props.creditCardInfo.cardNumber}</Text>
-              <Text>{this.props.creditCardInfo.securityCode}</Text>
-            </View>
-            <View>
-              <Text>{this.props.useDeliveryAddressAsBilling ? "Billing and Delivery Address" : "Billing Address"}</Text>
-              <Text>{this.props.billingAddress.lineOne}</Text>
-              <Text>{this.props.billingAddress.lineTwo && this.props.billingAddress.lineTwo}</Text>
-              <Text>{this.props.billingAddress.city}</Text>
-              <Text>{this.props.billingAddress.state}</Text>
-              <Text>{this.props.billingAddress.zip}</Text>
-            </View>
-            {!this.props.useDeliveryAddressAsBilling &&
-              <View>
-                <Text>Delivery Address</Text>
-                <Text>{this.props.deliveryAddress.lineOne}</Text>
-                <Text>{this.props.deliveryAddress.lineTwo && this.props.deliveryAddress.lineTwo}</Text>
-                <Text>{this.props.deliveryAddress.city}</Text>
-                <Text>{this.props.deliveryAddress.state}</Text>
-                <Text>{this.props.deliveryAddress.zip}</Text>
+            <Text style={styles.title}>Review Order</Text>
+            <View style={{flex: 1}}></View>
+          </View>
+          <View style={styles.orderInfo}>
+            <ScrollView>
+              <View style={styles.innerBookInfo}>
+                <Text style={styles.bookTitle}>{this.props.bookToOrder.title}</Text>
+                <Text style={styles.bookAuthor}>{this.props.bookToOrder.author}</Text>
               </View>
-            }
+              <View style={styles.itemInfo}>
+                <Text style={styles.itemHeader}>Payment Information</Text>
+                <Text style={styles.infoTitle}>name on card:</Text>
+                <Text style={styles.info}> { this.props.creditCardInfo.nameOnCard}</Text>
+                <Text style={styles.infoTitle}>card #:</Text>
+                <Text style={styles.info}>
+                  {this.props.creditCardInfo.cardNumber}</Text>
+                <Text style={styles.infoTitle}>security code:</Text>
+                <Text style={styles.info}>
+                  {this.props.creditCardInfo.securityCode}</Text>
+              </View>
+              <View style={styles.itemInfo}>
+                <Text style={styles.itemHeader}> {this.props.useDeliveryAddressAsBilling ? "Billing and Delivery Address" : "Billing Address"}</Text>
+                <Text style={styles.infoTitle}>line one:</Text>
+                <Text style={styles.info}>
+                  {this.props.billingAddress.lineOne}</Text>
+                <Text>
+                  {this.props.billingAddress.lineTwo &&
+                    <Text style={styles.infoTitle}>
+                      line two:
+                    </Text>
+                  }
+                </Text>
+                <Text style={styles.infoContainer}>
+                  {this.props.billingAddress.lineTwo &&
+                    <Text style={styles.info}>
+                      {this.props.billingAddress.lineTwo}
+                    </Text>
+                  }
+                </Text>
+                <Text style={styles.infoTitle}>city:</Text>
+                <Text style={styles.info}>
+                  {this.props.billingAddress.city}</Text>
+                <Text style={styles.infoTitle}>state:</Text>
+                <Text style={styles.info}>
+                  {this.props.billingAddress.state}</Text>
+                <Text style={styles.infoTitle}>zip:</Text>
+                <Text style={styles.info}>
+                  {this.props.billingAddress.zip}</Text>
+              </View>
+              {!this.props.useDeliveryAddressAsBilling &&
+                <View style={styles.itemInfo}>
+                  <Text style={styles.itemHeader}>Delivery Address</Text>
+                  <Text style={styles.infoTitle}>line one:</Text>
+                  <Text style={styles.info}>
+                    {this.props.deliveryAddress.lineOne}</Text>
+                  <Text>
+                    {this.props.deliveryAddress.lineTwo &&
+                      <Text style={styles.infoTitle}>
+                        line two:
+                      </Text>
+                    }
+                  </Text>
+                  <Text style={styles.infoContainer}>
+                    {this.props.deliveryAddress.lineTwo &&
+                      <Text style={styles.info}>
+                        {this.props.deliveryAddress.lineTwo}
+                      </Text>
+                    }
+                  </Text>
+                  <Text style={styles.infoTitle}>city:</Text>
+                  <Text style={styles.info}>
+                    {this.props.deliveryAddress.city}</Text>
+                  <Text style={styles.infoTitle}>state:</Text>
+                  <Text style={styles.info}>
+                    {this.props.deliveryAddress.state}</Text>
+                  <Text style={styles.infoTitle}>zip:</Text>
+                  <Text style={styles.info}>
+                    {this.props.deliveryAddress.zip}</Text>
+                </View>
+              }
+            </ScrollView>
+          </View>
         </View>
         <View style={styles.menu}>
+          <TouchableHighlight style={styles.button} onPress={() => this.props.navigator.pop()}>
+            <Text style={styles.menuItem}>Back</Text>
+          </TouchableHighlight>
           <TouchableHighlight style={styles.button} onPress={() => {
               this.props.submitInfo(this.props.bookToOrder, 'SubmitOrder');
               this.navigate('OrderHistory');}
           }>
             <Text style={styles.menuItem}>Submit Order</Text>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.button} onPress={() => this.props.navigator.pop()}>
-            <Text style={styles.menuItem}>Back</Text>
-          </TouchableHighlight>
-          <TouchableHighlight style={styles.button} onPress={() => this.navigate('HomeScreen')}>
-            <Text style={styles.menuItem}>Home</Text>
           </TouchableHighlight>
         </View>
       </View>
@@ -77,30 +134,87 @@ export default class ReviewOrder extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
+  header: {
+    marginTop: 10,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'flex-start'
+  },
   selectedBook: {
+    flex: 6,
     alignItems: 'center',
     justifyContent: 'space-around',
   },
   title: {
-    fontSize: 35,
-    color: 'orange'
+    flex: 3,
+    fontSize: 40,
+    color: '#ffcd67',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4,
+    textAlign: 'center'
+  },
+  orderInfo: {
+    flex: 5,
+    width: 320,
+  },
+  itemHeader: {
+    fontSize: 26,
+    color: '#fff',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4,
+    textAlign: 'center'
+  },
+  itemInfo: {
+    flex: 3,
+    marginTop: 6,
+    marginBottom: 6,
+    padding: 6,
+    backgroundColor: 'rgba(255,205,103,0.8)',
+    borderRadius: 5,
+  },
+  innerBookInfo: {
+    flex: 4,
+    backgroundColor: '#ffcd67',
+    borderRadius: 5,
+    padding: 10,
+    alignItems: 'center',
+    marginBottom: 10,
   },
   bookTitle: {
-    fontSize: 20,
+    fontSize: 28,
     padding: 5,
-    marginTop: 15
+    textAlign: 'center'
   },
   bookAuthor: {
-    fontSize: 18,
+    fontSize: 24,
     padding: 5,
-    marginBottom: 15
+    textAlign: 'center'
+  },
+  infoTitle: {
+    fontSize: 24,
+    color: 'black',
+  },
+  infoContainer: {
+    marginLeft: 60
+  },
+  info: {
+    fontSize: 24,
+    color: '#fff',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4,
+    padding: 5,
+    marginLeft: 60,
   },
   menu: {
-    height: 200,
+    flex: 1,
+    flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
   },
@@ -108,11 +222,21 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#FFFFFF',
   },
+  homeButton: {
+    backgroundColor: '#6799FF',
+    width: 80,
+    margin: 5,
+    paddingTop: 10,
+    paddingBottom: 10,
+    borderRadius: 10,
+    alignItems: 'center',
+  },
   button: {
     backgroundColor: '#6799FF',
-    width: 250,
+    // flex: 1,
+    width: 150,
     padding: 10,
-    margin: 5,
+    margin: 10,
     borderRadius: 10,
     alignItems: 'center',
   }

@@ -3,7 +3,7 @@ import { StyleSheet,
          Text,
          TouchableHighlight,
          View,
-         ListView
+         ListView,
        } from 'react-native';
 
 export default class HomeScreen extends React.Component {
@@ -27,29 +27,31 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Welcome to the BookStore</Text>
-        <Text style={styles.subTitle}>Available Books</Text>
-        <View style={styles.bookList}>
-          <ListView
-            dataSource={this.state.dataSource.cloneWithRows(this.props.books)}
-            renderRow={(book) => {
-              return (
-                  <View>
-                    <TouchableHighlight style={styles.rowContainer}
-                        onPress={() => {
-                          this.props.selectBook(book)
-                          this.navigate('Order')
-                        }}>
-                      <View>
-                        <Text style={styles.bookTitle}>{book.title}</Text>
-                        <Text style={styles.bookAuthor}>{book.author}</Text>
-                      </View>
-                    </TouchableHighlight>
-                    <View style={styles.separator}/>
-                  </View>
-                )}}
-          />
-        </View>
+        <Text style={styles.title}>Pocket BookStore</Text>
+        <Text style={styles.subTitle}>Select from Available Books</Text>
+          <View style={styles.bookList}>
+
+            <ListView
+              dataSource={this.state.dataSource.cloneWithRows(this.props.books)}
+              renderRow={(book) => {
+                return (
+                    <View>
+                      <TouchableHighlight style={styles.rowContainer}
+                          onPress={() => {
+                            this.props.selectBook(book)
+                            this.navigate('Order')
+                          }}>
+                        <View>
+                          <Text style={styles.bookTitle}>{book.title}</Text>
+                          <Text style={styles.bookAuthor}>{book.author}</Text>
+                        </View>
+                      </TouchableHighlight>
+                      <View style={styles.separator}/>
+                    </View>
+                  )}}
+            />
+
+          </View>
         <View style={styles.menu}>
           <TouchableHighlight style={styles.button} onPress={() => this.navigate('OrderHistory')}>
             <Text style={styles.menuItem}>Orders</Text>
@@ -66,42 +68,59 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
   title: {
-    fontSize: 25,
+    marginTop: 45,
+    fontSize: 35,
+    flex: 1.5,
+    color: '#ffcd67',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4
   },
   subTitle: {
-    fontSize: 20
+    fontSize: 20,
+    flex: 1,
+    color: '#fff',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4
   },
   bookList: {
-    height: 300,
-    width: 300,
-    justifyContent: 'space-between',
+    flex: 6,
+    width: 320,
   },
   rowContainer: {
-    padding: 5,
-    backgroundColor: '#ffcd67',
+    padding: 1,
     borderRadius: 5,
     marginTop: 5,
-    marginBottom: 5
+    marginBottom: 5,
   },
   bookTitle: {
-    fontSize: 15,
-    padding: 5
+    fontSize: 17,
+    padding: 5,
+    color: '#fff',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4
   },
   bookAuthor: {
-    fontSize: 12,
-    padding: 5
+    fontSize: 14,
+    padding: 5,
+    color: '#fff',
+    textShadowColor: 'black',
+    textShadowOffset: {width: 1, height: 1},
+    textShadowRadius: 4
   },
   separator: {
     height: 1,
     backgroundColor: '#dddddd'
   },
   menu: {
-    height: 100,
+    flex: 1.5,
+    flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
   },
@@ -111,7 +130,7 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#6799FF',
-    width: 250,
+    width: 100,
     padding: 10,
     margin: 5,
     borderRadius: 10,
