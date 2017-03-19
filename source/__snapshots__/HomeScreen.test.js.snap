@@ -5,67 +5,78 @@ exports[`renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#fff",
       "flex": 1,
       "justifyContent": "space-around",
     }
   }
 >
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "fontSize": 25,
-      }
-    }
-  >
-    Welcome to the BookStore
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "fontSize": 20,
-      }
-    }
-  >
-    Available Books
-  </Text>
   <View
     style={
       Object {
-        "height": 300,
-        "justifyContent": "space-between",
-        "width": 300,
+        "alignItems": "center",
+        "flex": 2.2,
+        "marginBottom": 10,
+        "marginTop": 15,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "color": "#ffcd67",
+          "flex": 1.5,
+          "fontSize": 40,
+          "textShadowColor": "black",
+          "textShadowOffset": Object {
+            "height": 1,
+            "width": 1,
+          },
+          "textShadowRadius": 4,
+        }
+      }
+    >
+      Pocket BookStore
+    </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#fff",
+          "flex": 1,
+          "fontSize": 30,
+          "textShadowColor": "black",
+          "textShadowOffset": Object {
+            "height": 1,
+            "width": 1,
+          },
+          "textShadowRadius": 4,
+        }
+      }
+    >
+      Select from Available Books
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 6,
+        "width": 320,
       }
     }
   >
     <ScrollView
-      dataSource={
-        ListViewDataSource {
-          "items": 2,
+      style={
+        Object {
+          "flex": 6,
+          "width": 320,
         }
       }
-      initialListSize={10}
-      onContentSizeChange={[Function]}
-      onEndReachedThreshold={1000}
-      onKeyboardDidHide={undefined}
-      onKeyboardDidShow={undefined}
-      onKeyboardWillHide={undefined}
-      onKeyboardWillShow={undefined}
-      onLayout={[Function]}
-      onScroll={[Function]}
-      pageSize={1}
-      removeClippedSubviews={true}
-      renderRow={[Function]}
-      scrollEventThrottle={50}
-      scrollRenderAheadDistance={1000}
-      stickyHeaderIndices={Array []}
-      stickySectionHeadersEnabled={true}
     >
       <View>
         <View
@@ -89,11 +100,12 @@ exports[`renders correctly 1`] = `
                 "backgroundColor": "transparent",
               },
               Object {
-                "backgroundColor": "#ffcd67",
+                "backgroundColor": "rgba(255,205,103,0.8)",
                 "borderRadius": 5,
-                "marginBottom": 5,
-                "marginTop": 5,
-                "padding": 5,
+                "flex": 1,
+                "marginBottom": 6,
+                "marginTop": 6,
+                "padding": 6,
               },
             ]
           }
@@ -107,8 +119,15 @@ exports[`renders correctly 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "fontSize": 15,
+                  "color": "#fff",
+                  "fontSize": 22,
                   "padding": 5,
+                  "textShadowColor": "black",
+                  "textShadowOffset": Object {
+                    "height": 1,
+                    "width": 1,
+                  },
+                  "textShadowRadius": 4,
                 }
               }
             >
@@ -120,7 +139,7 @@ exports[`renders correctly 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "fontSize": 12,
+                  "fontSize": 18,
                   "padding": 5,
                 }
               }
@@ -160,11 +179,12 @@ exports[`renders correctly 1`] = `
                 "backgroundColor": "transparent",
               },
               Object {
-                "backgroundColor": "#ffcd67",
+                "backgroundColor": "rgba(255,205,103,0.8)",
                 "borderRadius": 5,
-                "marginBottom": 5,
-                "marginTop": 5,
-                "padding": 5,
+                "flex": 1,
+                "marginBottom": 6,
+                "marginTop": 6,
+                "padding": 6,
               },
             ]
           }
@@ -178,8 +198,15 @@ exports[`renders correctly 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "fontSize": 15,
+                  "color": "#fff",
+                  "fontSize": 22,
                   "padding": 5,
+                  "textShadowColor": "black",
+                  "textShadowOffset": Object {
+                    "height": 1,
+                    "width": 1,
+                  },
+                  "textShadowRadius": 4,
                 }
               }
             >
@@ -191,7 +218,7 @@ exports[`renders correctly 1`] = `
               ellipsizeMode="tail"
               style={
                 Object {
-                  "fontSize": 12,
+                  "fontSize": 18,
                   "padding": 5,
                 }
               }
@@ -215,7 +242,8 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "height": 100,
+        "flex": 1.5,
+        "flexDirection": "row",
         "justifyContent": "space-around",
       }
     }
@@ -246,7 +274,7 @@ exports[`renders correctly 1`] = `
             "borderRadius": 10,
             "margin": 5,
             "padding": 10,
-            "width": 250,
+            "width": 100,
           },
         ]
       }
@@ -293,7 +321,7 @@ exports[`renders correctly 1`] = `
             "borderRadius": 10,
             "margin": 5,
             "padding": 10,
-            "width": 250,
+            "width": 100,
           },
         ]
       }

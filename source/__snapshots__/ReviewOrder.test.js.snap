@@ -5,7 +5,6 @@ exports[`renders correctly 1`] = `
   style={
     Object {
       "alignItems": "center",
-      "backgroundColor": "#fff",
       "flex": 1,
       "justifyContent": "space-around",
     }
@@ -15,184 +14,679 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "flex": 6,
         "justifyContent": "space-around",
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "orange",
-          "fontSize": 35,
-        }
-      }
-    >
-      Review Order
-    </Text>
     <View
       style={
         Object {
-          "alignItems": "center",
+          "alignItems": "flex-start",
+          "flex": 1,
+          "flexDirection": "row",
           "justifyContent": "space-around",
+          "marginTop": 15,
         }
       }
     >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#6799FF",
+                "borderRadius": 10,
+                "margin": 5,
+                "paddingBottom": 10,
+                "paddingTop": 10,
+                "width": 80,
+              },
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "fontSize": 18,
+              }
+            }
+          >
+            Home
+          </Text>
+        </View>
+      </View>
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
           Object {
-            "fontSize": 20,
-            "marginTop": 15,
-            "padding": 5,
+            "color": "#ffcd67",
+            "flex": 3,
+            "fontSize": 40,
+            "textAlign": "center",
+            "textShadowColor": "black",
+            "textShadowOffset": Object {
+              "height": 1,
+              "width": 1,
+            },
+            "textShadowRadius": 4,
           }
         }
       >
-        The Lexus and the Olive Tree
+        Review Order
       </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+      <View
         style={
           Object {
-            "fontSize": 18,
-            "marginBottom": 15,
-            "padding": 5,
+            "flex": 1,
           }
         }
-      >
-        Thomas Friedman
-      </Text>
+      />
     </View>
-    <View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        Payment Information
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-    </View>
-    <View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        Billing Address
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-    </View>
-    <View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        Delivery Address
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-      >
-        
-      </Text>
+    <View
+      style={
+        Object {
+          "flex": 5,
+          "width": 320,
+        }
+      }
+    >
+      <ScrollView>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffcd67",
+              "borderRadius": 5,
+              "flex": 4,
+              "marginBottom": 10,
+              "padding": 10,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 28,
+                "padding": 5,
+                "textAlign": "center",
+              }
+            }
+          >
+            The Lexus and the Olive Tree
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 24,
+                "padding": 5,
+                "textAlign": "center",
+              }
+            }
+          >
+            Thomas Friedman
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgba(255,205,103,0.8)",
+              "borderRadius": 5,
+              "flex": 3,
+              "marginBottom": 6,
+              "marginTop": 6,
+              "padding": 6,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 26,
+                "textAlign": "center",
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            Payment Information
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 24,
+              }
+            }
+          >
+            name on card:
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 24,
+                "marginLeft": 60,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+             
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 24,
+              }
+            }
+          >
+            card #:
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 24,
+                "marginLeft": 60,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 24,
+              }
+            }
+          >
+            security code:
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 24,
+                "marginLeft": 60,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgba(255,205,103,0.8)",
+              "borderRadius": 5,
+              "flex": 3,
+              "marginBottom": 6,
+              "marginTop": 6,
+              "padding": 6,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 26,
+                "textAlign": "center",
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+             
+            Billing Address
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 24,
+              }
+            }
+          >
+            line one:
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 24,
+                "marginLeft": 60,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginLeft": 60,
+              }
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 24,
+              }
+            }
+          >
+            city:
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 24,
+                "marginLeft": 60,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 24,
+              }
+            }
+          >
+            state:
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 24,
+                "marginLeft": 60,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 24,
+              }
+            }
+          >
+            zip:
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 24,
+                "marginLeft": 60,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgba(255,205,103,0.8)",
+              "borderRadius": 5,
+              "flex": 3,
+              "marginBottom": 6,
+              "marginTop": 6,
+              "padding": 6,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 26,
+                "textAlign": "center",
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            Delivery Address
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 24,
+              }
+            }
+          >
+            line one:
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 24,
+                "marginLeft": 60,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "marginLeft": 60,
+              }
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 24,
+              }
+            }
+          >
+            city:
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 24,
+                "marginLeft": 60,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 24,
+              }
+            }
+          >
+            state:
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 24,
+                "marginLeft": 60,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "black",
+                "fontSize": 24,
+              }
+            }
+          >
+            zip:
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 24,
+                "marginLeft": 60,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            
+          </Text>
+        </View>
+      </ScrollView>
     </View>
   </View>
   <View
     style={
       Object {
         "alignItems": "center",
-        "height": 200,
+        "flex": 1,
+        "flexDirection": "row",
         "justifyContent": "space-around",
       }
     }
@@ -221,56 +715,9 @@ exports[`renders correctly 1`] = `
             "alignItems": "center",
             "backgroundColor": "#6799FF",
             "borderRadius": 10,
-            "margin": 5,
+            "margin": 10,
             "padding": 10,
-            "width": 250,
-          },
-        ]
-      }
-      testID={undefined}
-      tvParallaxProperties={undefined}
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "color": "#FFFFFF",
-            "fontSize": 18,
-          }
-        }
-      >
-        Submit Order
-      </Text>
-    </View>
-    <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
-      accessible={true}
-      hasTVPreferredFocus={undefined}
-      hitSlop={undefined}
-      isTVSelectable={true}
-      onLayout={undefined}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#6799FF",
-            "borderRadius": 10,
-            "margin": 5,
-            "padding": 10,
-            "width": 250,
+            "width": 150,
           },
         ]
       }
@@ -315,9 +762,9 @@ exports[`renders correctly 1`] = `
             "alignItems": "center",
             "backgroundColor": "#6799FF",
             "borderRadius": 10,
-            "margin": 5,
+            "margin": 10,
             "padding": 10,
-            "width": 250,
+            "width": 150,
           },
         ]
       }
@@ -335,7 +782,7 @@ exports[`renders correctly 1`] = `
           }
         }
       >
-        Home
+        Submit Order
       </Text>
     </View>
   </View>
