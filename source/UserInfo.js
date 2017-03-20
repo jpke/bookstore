@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {submitInfo} from './actions';
 import { StyleSheet,
          Text,
          TextInput,
@@ -6,7 +8,7 @@ import { StyleSheet,
          View
        } from 'react-native';
 
-export default class UserInfo extends React.Component {
+class UserInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -79,6 +81,23 @@ export default class UserInfo extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    userInfo: state.userInfo,
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    submitInfo: (info, type, option) => dispatch(submitInfo(info, type, option))
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(UserInfo);
 
 const styles = StyleSheet.create({
   container: {

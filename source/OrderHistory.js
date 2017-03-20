@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import { StyleSheet,
          Text,
          TouchableHighlight,
@@ -7,7 +8,7 @@ import { StyleSheet,
        } from 'react-native';
 import formatAMPM from './dateFormatter';
 
-export default class OrderHistory extends React.Component {
+class OrderHistory extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -58,6 +59,22 @@ export default class OrderHistory extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    orders: state.orders,
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(OrderHistory);
 
 const styles = StyleSheet.create({
   container: {

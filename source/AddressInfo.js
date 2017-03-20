@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {submitInfo} from './actions';
 import { StyleSheet,
          Text,
          TextInput,
@@ -7,7 +9,7 @@ import { StyleSheet,
          View
        } from 'react-native';
 
-export default class AddressInfo extends React.Component {
+class AddressInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -106,6 +108,23 @@ export default class AddressInfo extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    test: "test"
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    submitInfo: (info, type, option) => dispatch(submitInfo(info, type, option))
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AddressInfo);
 
 const styles = StyleSheet.create({
   container: {

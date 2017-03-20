@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import { StyleSheet,
          Text,
          TouchableHighlight,
@@ -15,7 +16,8 @@ import AddressInfo from './AddressInfo';
 import PaymentInfo from './PaymentInfo';
 import ReviewOrder from './ReviewOrder';
 
-export default class Root extends React.Component {
+
+class Root extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -132,35 +134,25 @@ export default class Root extends React.Component {
 
   renderScene(route, navigator) {
    if(route.name == 'HomeScreen') {
-     return <HomeScreen navigator={navigator}
-            books={this.state.availableBooks}
-            selectBook={this.selectNewBook.bind(this)}/>
+     return <HomeScreen navigator={navigator} />
    }
    if(route.name == 'Admin') {
-     return <Admin navigator={navigator}
-            newBook={this.state.newBook}
-            submitInfo={this.submitInfo.bind(this)}/>
+     return <Admin navigator={navigator} />
    }
    if(route.name == 'Order') {
-     return <Order navigator={navigator}
-            submitOrderInfo={this.submitInfo}
-            selectedTitle={this.state.bookToOrder.title}
-            selectedAuthor={this.state.bookToOrder.author}/>
+     return <Order navigator={navigator} />
    }
    if(route.name == 'OrderHistory') {
-     return <OrderHistory navigator={navigator}
-            orders={this.state.orders}/>
+     return <OrderHistory navigator={navigator} />
    }
    if(route.name == 'UserInfo') {
-     return <UserInfo navigator={navigator}
-            userInfo={this.state.userInfo}
-            submitInfo={this.submitInfo.bind(this)}/>
+     return <UserInfo navigator={navigator} />
    }
    if(route.name == 'AddressInfo') {
      return <AddressInfo navigator={navigator}
             addressType={route.option === 'delivery' ? 'Delivery' : 'Billing'}
-            address={route.option === 'delivery' ? this.state.deliveryAddress : this.state.billingAddress}
-            submitInfo={this.submitInfo.bind(this)}/>
+            address={route.option === 'delivery' ? this.props.deliveryAddress : this.props.billingAddress}
+            />
    }
    if(route.name == 'PaymentInfo') {
      return <PaymentInfo navigator={navigator}
@@ -192,8 +184,25 @@ export default class Root extends React.Component {
        </Image>
      </View>
    );
+  }
 }
+
+function mapStateToProps(state) {
+  return {
+    deliveryAddress: state.deliveryAddress,
+    billingAddress: state.billingAddress
+  }
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Root);
 
 const styles = StyleSheet.create({
   container: {
