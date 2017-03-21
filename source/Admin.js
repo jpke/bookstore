@@ -61,6 +61,7 @@ class Admin extends React.Component {
             <Text style={styles.menuItem}>Back</Text>
           </TouchableHighlight>
           <TouchableHighlight style={styles.button} onPress={() => {
+              this.state.title && this.state.author &&
               this.props.submitInfo({
                 title: this.state.title,
                 author: this.state.author,
