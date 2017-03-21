@@ -14,7 +14,7 @@ exports[`renders correctly 1`] = `
     style={
       Object {
         "alignItems": "flex-start",
-        "flex": 1,
+        "flex": 2,
         "flexDirection": "row",
         "justifyContent": "space-around",
         "marginTop": 10,
@@ -28,52 +28,35 @@ exports[`renders correctly 1`] = `
         }
       }
     />
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "#ffcd67",
-          "flex": 1,
-          "fontSize": 40,
-          "textAlign": "center",
-          "textShadowColor": "black",
-          "textShadowOffset": Object {
-            "height": 1,
-            "width": 1,
-          },
-          "textShadowRadius": 4,
-        }
-      }
-    >
-      Admin
-    </Text>
-    <View
-      style={
-        Object {
-          "flex": 1,
-        }
-      }
-    />
-  </View>
-  <View
-    style={
-      Object {
-        "flex": 5,
-        "justifyContent": "center",
-      }
-    }
-  >
     <View
       style={
         Object {
           "alignItems": "center",
-          "flex": 2,
-          "justifyContent": "center",
+          "flex": 10,
         }
       }
     >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#ffcd67",
+            "flex": 1,
+            "fontSize": 40,
+            "textAlign": "center",
+            "textShadowColor": "black",
+            "textShadowOffset": Object {
+              "height": 1,
+              "width": 1,
+            },
+            "textShadowRadius": 4,
+          }
+        }
+      >
+        Admin
+      </Text>
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -94,6 +77,32 @@ exports[`renders correctly 1`] = `
       >
         Add to Available Books
       </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 4,
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+          "justifyContent": "flex-start",
+        }
+      }
+    >
       <TextInput
         onChangeText={[Function]}
         placeholder="Title"

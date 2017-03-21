@@ -103,7 +103,7 @@ export const initialState = {
       };
     case types.SUBMIT_ORDER:
       newOrder = Object.assign({}, action.info);
-      newOrder.date = new Date();
+      if(!action.info.date) newOrder.date = new Date();
       orders = state.orders.concat(newOrder);
       books = state.availableBooks.slice();
       books = books.filter(book => book.title !== newOrder.title)

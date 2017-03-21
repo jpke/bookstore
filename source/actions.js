@@ -7,13 +7,6 @@ export function selectNewBook(newBook) {
   };
 }
 
-function AdminAddBook(key, value) {
-  return {
-    type: types.ADMIN_ADD_BOOK,
-    value
-  };
-}
-
 function deliveryAddress(info, useDeliveryAddressAsBilling) {
   return {
     type: types.DELIVERY,

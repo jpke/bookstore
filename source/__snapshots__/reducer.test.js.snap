@@ -61,6 +61,234 @@ Object {
 }
 `;
 
+exports[`should handle BILLING 1`] = `
+Object {
+  "availableBooks": Array [
+    Object {
+      "author": "Carroll Quigley",
+      "title": "The Evolution of Civilizations",
+    },
+    Object {
+      "author": "Stephan Pinker",
+      "title": "How the Mind Works",
+    },
+  ],
+  "billingAddress": Object {
+    "city": "_",
+    "lineOne": "_",
+    "lineTwo": "_",
+    "state": "_",
+    "zip": "_",
+  },
+  "bookToOrder": "",
+  "creditCardInfo": Object {
+    "cardNumber": "",
+    "nameOnCard": "",
+    "securityCode": "",
+  },
+  "deliveryAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "newBook": Object {
+    "author": "",
+    "title": "",
+  },
+  "orders": Array [
+    Object {
+      "author": "Thomas Friedman",
+      "date": 2017-03-18T20:38:08.000Z,
+      "title": "The Lexus and the Olive Tree",
+    },
+    Object {
+      "author": "Toby Reynolds",
+      "date": 2017-03-17T20:40:30.000Z,
+      "title": "Wit and Wisdom",
+    },
+  ],
+  "useDeliveryAddressAsBilling": false,
+  "userInfo": Object {
+    "email": "",
+    "firstName": "",
+    "lastName": "",
+  },
+}
+`;
+
+exports[`should handle DELIVERY 1`] = `
+Object {
+  "availableBooks": Array [
+    Object {
+      "author": "Carroll Quigley",
+      "title": "The Evolution of Civilizations",
+    },
+    Object {
+      "author": "Stephan Pinker",
+      "title": "How the Mind Works",
+    },
+  ],
+  "billingAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "bookToOrder": "",
+  "creditCardInfo": Object {
+    "cardNumber": "",
+    "nameOnCard": "",
+    "securityCode": "",
+  },
+  "deliveryAddress": Object {
+    "city": "_",
+    "lineOne": "_",
+    "lineTwo": "_",
+    "state": "_",
+    "zip": "_",
+  },
+  "newBook": Object {
+    "author": "",
+    "title": "",
+  },
+  "orders": Array [
+    Object {
+      "author": "Thomas Friedman",
+      "date": 2017-03-18T20:38:08.000Z,
+      "title": "The Lexus and the Olive Tree",
+    },
+    Object {
+      "author": "Toby Reynolds",
+      "date": 2017-03-17T20:40:30.000Z,
+      "title": "Wit and Wisdom",
+    },
+  ],
+  "useDeliveryAddressAsBilling": false,
+  "userInfo": Object {
+    "email": "",
+    "firstName": "",
+    "lastName": "",
+  },
+}
+`;
+
+exports[`should handle DELIVERY_AND_BILLING 1`] = `
+Object {
+  "availableBooks": Array [
+    Object {
+      "author": "Carroll Quigley",
+      "title": "The Evolution of Civilizations",
+    },
+    Object {
+      "author": "Stephan Pinker",
+      "title": "How the Mind Works",
+    },
+  ],
+  "billingAddress": Object {
+    "city": "_",
+    "lineOne": "_",
+    "lineTwo": "_",
+    "state": "_",
+    "zip": "_",
+  },
+  "bookToOrder": "",
+  "creditCardInfo": Object {
+    "cardNumber": "",
+    "nameOnCard": "",
+    "securityCode": "",
+  },
+  "deliveryAddress": Object {
+    "city": "_",
+    "lineOne": "_",
+    "lineTwo": "_",
+    "state": "_",
+    "zip": "_",
+  },
+  "newBook": Object {
+    "author": "",
+    "title": "",
+  },
+  "orders": Array [
+    Object {
+      "author": "Thomas Friedman",
+      "date": 2017-03-18T20:38:08.000Z,
+      "title": "The Lexus and the Olive Tree",
+    },
+    Object {
+      "author": "Toby Reynolds",
+      "date": 2017-03-17T20:40:30.000Z,
+      "title": "Wit and Wisdom",
+    },
+  ],
+  "useDeliveryAddressAsBilling": true,
+  "userInfo": Object {
+    "email": "",
+    "firstName": "",
+    "lastName": "",
+  },
+}
+`;
+
+exports[`should handle PAYMENT_INFO 1`] = `
+Object {
+  "availableBooks": Array [
+    Object {
+      "author": "Carroll Quigley",
+      "title": "The Evolution of Civilizations",
+    },
+    Object {
+      "author": "Stephan Pinker",
+      "title": "How the Mind Works",
+    },
+  ],
+  "billingAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "bookToOrder": "",
+  "creditCardInfo": Object {
+    "cardNumber": "_",
+    "nameOnCard": "_",
+    "securityCode": "_",
+  },
+  "deliveryAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "newBook": Object {
+    "author": "",
+    "title": "",
+  },
+  "orders": Array [
+    Object {
+      "author": "Thomas Friedman",
+      "date": 2017-03-18T20:38:08.000Z,
+      "title": "The Lexus and the Olive Tree",
+    },
+    Object {
+      "author": "Toby Reynolds",
+      "date": 2017-03-17T20:40:30.000Z,
+      "title": "Wit and Wisdom",
+    },
+  ],
+  "useDeliveryAddressAsBilling": false,
+  "userInfo": Object {
+    "email": "",
+    "firstName": "",
+    "lastName": "",
+  },
+}
+`;
+
 exports[`should handle SELECT_NEW_BOOK 1`] = `
 Object {
   "availableBooks": Array [
@@ -117,6 +345,121 @@ Object {
     "email": "",
     "firstName": "",
     "lastName": "",
+  },
+}
+`;
+
+exports[`should handle SUBMIT_ORDER 1`] = `
+Object {
+  "availableBooks": Array [
+    Object {
+      "author": "Stephan Pinker",
+      "title": "How the Mind Works",
+    },
+  ],
+  "billingAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "bookToOrder": "",
+  "creditCardInfo": Object {
+    "cardNumber": "",
+    "nameOnCard": "",
+    "securityCode": "",
+  },
+  "deliveryAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "newBook": Object {
+    "author": "",
+    "title": "",
+  },
+  "orders": Array [
+    Object {
+      "author": "Thomas Friedman",
+      "date": 2017-03-18T20:38:08.000Z,
+      "title": "The Lexus and the Olive Tree",
+    },
+    Object {
+      "author": "Toby Reynolds",
+      "date": 2017-03-17T20:40:30.000Z,
+      "title": "Wit and Wisdom",
+    },
+    Object {
+      "author": "Carroll Quigley",
+      "date": 2017-03-18T20:38:08.000Z,
+      "title": "The Evolution of Civilizations",
+    },
+  ],
+  "useDeliveryAddressAsBilling": false,
+  "userInfo": Object {
+    "email": "",
+    "firstName": "",
+    "lastName": "",
+  },
+}
+`;
+
+exports[`should handle USER_INFO 1`] = `
+Object {
+  "availableBooks": Array [
+    Object {
+      "author": "Carroll Quigley",
+      "title": "The Evolution of Civilizations",
+    },
+    Object {
+      "author": "Stephan Pinker",
+      "title": "How the Mind Works",
+    },
+  ],
+  "billingAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "bookToOrder": "",
+  "creditCardInfo": Object {
+    "cardNumber": "",
+    "nameOnCard": "",
+    "securityCode": "",
+  },
+  "deliveryAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "newBook": Object {
+    "author": "",
+    "title": "",
+  },
+  "orders": Array [
+    Object {
+      "author": "Thomas Friedman",
+      "date": 2017-03-18T20:38:08.000Z,
+      "title": "The Lexus and the Olive Tree",
+    },
+    Object {
+      "author": "Toby Reynolds",
+      "date": 2017-03-17T20:40:30.000Z,
+      "title": "Wit and Wisdom",
+    },
+  ],
+  "useDeliveryAddressAsBilling": false,
+  "userInfo": Object {
+    "email": "_",
+    "firstName": "_",
+    "lastName": "_",
   },
 }
 `;

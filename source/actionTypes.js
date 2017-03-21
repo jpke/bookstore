@@ -6,4 +6,3 @@ export const DELIVERY = 'DELIVERY';
 export const BILLING = 'BILLING';
 export const PAYMENT_INFO = 'PAYMENT_INFO';
 export const SUBMIT_ORDER = 'SUBMIT_ORDER';
-export const NAVIGATE = 'NAVIGATE';
