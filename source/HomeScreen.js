@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {selectNewBook} from './actions';
 import { StyleSheet,
          Text,
          TouchableHighlight,
@@ -6,7 +8,7 @@ import { StyleSheet,
          ScrollView,
        } from 'react-native';
 
-export default class HomeScreen extends React.Component {
+class HomeScreen extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -59,6 +61,23 @@ export default class HomeScreen extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    books: state.availableBooks
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    selectBook: (newBook) => dispatch(selectNewBook(newBook))
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HomeScreen);
 
 const styles = StyleSheet.create({
   container: {

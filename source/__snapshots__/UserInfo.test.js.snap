@@ -120,67 +120,71 @@ exports[`renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "flex": 3,
-          "justifyContent": "space-around",
+          "justifyContent": "flex-start",
         }
       }
     >
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="First Name"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 10,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
+      <View
+        style={undefined}
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="First Name"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
           }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="Last Name"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 10,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Last Name"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
           }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="email"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 10,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="email"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
           }
-        }
-        value=""
-      />
+          value=""
+        />
+      </View>
     </View>
   </View>
   <View

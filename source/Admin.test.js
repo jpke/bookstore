@@ -1,21 +1,17 @@
 import React from 'react';
 import ReactNative from 'react-native';
-import Admin from './Admin';
-
 import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import configureStore from './store';
+const store = configureStore();
 
-function submitInfo(info, type, option) {
-  console.log("order info to save to app state: ", info, type, option);
-}
+import Admin from './Admin';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <Admin
-      newBook={{
-              title: "",
-              author: ""
-            }}
-      submitInfo={submitInfo}/>
+    <Provider store={store}>
+      <Admin />
+    </Provider>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 })

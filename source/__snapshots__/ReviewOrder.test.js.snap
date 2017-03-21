@@ -147,9 +147,7 @@ exports[`renders correctly 1`] = `
                 "textAlign": "center",
               }
             }
-          >
-            The Lexus and the Olive Tree
-          </Text>
+          />
           <Text
             accessible={true}
             allowFontScaling={true}
@@ -161,9 +159,7 @@ exports[`renders correctly 1`] = `
                 "textAlign": "center",
               }
             }
-          >
-            Thomas Friedman
-          </Text>
+          />
         </View>
         <View
           style={

@@ -120,67 +120,71 @@ exports[`renders correctly 1`] = `
         Object {
           "alignItems": "center",
           "flex": 3,
-          "justifyContent": "space-around",
+          "justifyContent": "flex-start",
         }
       }
     >
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="Name on Card"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
+      <View
+        style={undefined}
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Name on Card"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
           }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="Card Number"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Card Number"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
           }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="Security Code"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Security Code"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
           }
-        }
-        value=""
-      />
+          value=""
+        />
+      </View>
     </View>
   </View>
   <View

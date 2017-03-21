@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {submitInfo} from './actions';
 import { StyleSheet,
          Text,
          TextInput,
@@ -6,7 +8,7 @@ import { StyleSheet,
          View
        } from 'react-native';
 
-export default class Admin extends React.Component {
+class Admin extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,12 +37,14 @@ export default class Admin extends React.Component {
       <View style={styles.container}>
         <View style={styles.header}>
           <View style={{flex: 1}}></View>
-          <Text style={styles.title}>Admin</Text>
+          <View style={{flex: 10, alignItems: 'center'}}>
+            <Text style={styles.title}>Admin</Text>
+            <Text style={styles.subTitle}>Add to Available Books</Text>
+          </View>
           <View style={{flex: 1}}></View>
         </View>
         <View style={styles.inputContainer}>
           <View style={styles.innerInputContainer}>
-            <Text style={styles.subTitle}>Add to Available Books</Text>
             <TextInput style={styles.input}
               value={this.state.firstName}
               placeholder="Title"
@@ -71,6 +75,23 @@ export default class Admin extends React.Component {
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    newBook: state.newBook,
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    submitInfo: (info, type, option) => dispatch(submitInfo(info, type, option))
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Admin);
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -79,7 +100,7 @@ const styles = StyleSheet.create({
   },
   header: {
     marginTop: 10,
-    flex: 1,
+    flex: 2,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'flex-start'
@@ -94,12 +115,12 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   inputContainer: {
-    flex: 5,
-    justifyContent: 'center',
+    flex: 4,
+    justifyContent: 'flex-end',
   },
   innerInputContainer: {
-    flex: 2,
-    justifyContent: 'center',
+    flex: 3,
+    justifyContent: 'flex-start',
     alignItems: 'center'
   },
   subTitle: {

@@ -1,47 +1,17 @@
 import React from 'react';
 import ReactNative from 'react-native';
-import ReviewOrder from './ReviewOrder';
-
 import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import configureStore from './store';
+const store = configureStore();
 
-function submitInfo(info, type, option) {
-  console.log("order info to save to app state: ", info, type, option);
-}
+import ReviewOrder from './ReviewOrder';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <ReviewOrder
-      userInfo={{
-        firstName: "",
-        lastName: "",
-        email: ""
-      }}
-      bookToOrder={{
-        title: "The Lexus and the Olive Tree",
-        author: "Thomas Friedman",
-        date: new Date()
-      }}
-      creditCardInfo={{
-        nameOnCard: "",
-        cardNumber: "",
-        securityCode: ""
-      }}
-      useDeliveryAddressAsBilling={false}
-      billingAddress={{
-        lineOne: "",
-        lineTwo: "",
-        city: "",
-        state: "",
-        zip: ""
-      }}
-      deliveryAddress={{
-        lineOne: "",
-        lineTwo: "",
-        city: "",
-        state: "",
-        zip: ""
-      }}
-      submitInfo={submitInfo}/>
+    <Provider store={store}>
+      <ReviewOrder />
+    </Provider>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 })

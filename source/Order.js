@@ -1,7 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import {connect} from 'react-redux';
+import {submitInfo} from './actions';
+import { StyleSheet,
+         Text,
+         TouchableHighlight,
+         View
+       } from 'react-native';
 
-export default class Order extends React.Component {
+class Order extends React.Component {
   navigate(routeName) {
     if(routeName === "HomeScreen") {
       this.props.navigator.popToTop(0);
@@ -45,6 +51,24 @@ export default class Order extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    selectedTitle: state.bookToOrder.title,
+    selectedAuthor: state.bookToOrder.author
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    submitOrderInfo: (info, type, option) => dispatch(submitInfo(info, type, option))
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Order);
 
 const styles = StyleSheet.create({
   container: {

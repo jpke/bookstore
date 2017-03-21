@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {submitInfo} from './actions';
 import { StyleSheet,
          Text,
          TextInput,
@@ -6,7 +8,7 @@ import { StyleSheet,
          View
        } from 'react-native';
 
-export default class UserInfo extends React.Component {
+class UserInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -46,18 +48,20 @@ export default class UserInfo extends React.Component {
             <View style={{flex: 1}}></View>
           </View>
           <View style={styles.inputForm}>
-            <TextInput style={styles.input}
-              value={this.state.firstName}
-              placeholder="First Name"
-              onChangeText={(text) => this.updateState(text, 'firstName')}/>
-            <TextInput style={styles.input}
-              value={this.state.lastName}
-              placeholder="Last Name"
-              onChangeText={(text) => this.updateState(text, 'lastName')}/>
-            <TextInput style={styles.input}
-              value={this.state.email}
-              placeholder="email"
-              onChangeText={(text) => this.updateState(text, 'email')}/>
+            <View style={styles.inputFormInnerContainer}>
+              <TextInput style={styles.input}
+                value={this.state.firstName}
+                placeholder="First Name"
+                onChangeText={(text) => this.updateState(text, 'firstName')}/>
+              <TextInput style={styles.input}
+                value={this.state.lastName}
+                placeholder="Last Name"
+                onChangeText={(text) => this.updateState(text, 'lastName')}/>
+              <TextInput style={styles.input}
+                value={this.state.email}
+                placeholder="email"
+                onChangeText={(text) => this.updateState(text, 'email')}/>
+            </View>
           </View>
         </View>
         <View style={styles.menu}>
@@ -79,6 +83,23 @@ export default class UserInfo extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    userInfo: state.userInfo,
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    submitInfo: (info, type, option) => dispatch(submitInfo(info, type, option))
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(UserInfo);
 
 const styles = StyleSheet.create({
   container: {
@@ -110,7 +131,7 @@ const styles = StyleSheet.create({
   inputForm: {
     flex: 3,
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
   },
   input: {
     flex: 1,
@@ -120,7 +141,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ffcd67',
     backgroundColor: '#ffcd67',
-    margin: 10,
+    margin: 6,
     padding: 5,
     borderRadius: 5
   },

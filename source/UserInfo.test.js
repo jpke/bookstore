@@ -1,22 +1,17 @@
 import React from 'react';
 import ReactNative from 'react-native';
-import UserInfo from './UserInfo';
-
 import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import configureStore from './store';
+const store = configureStore();
 
-function submitInfo(info, type, option) {
-  console.log("order info to save to app state: ", info, type, option);
-}
+import UserInfo from './UserInfo';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <UserInfo
-      userInfo={{
-        firstName: "",
-        lastName: "",
-        email: ""
-      }}
-      submitInfo={submitInfo}/>
+    <Provider store={store}>
+      <UserInfo />
+    </Provider>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 })
