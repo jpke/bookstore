@@ -83,9 +83,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   header: {
-    marginTop: 10,
+    marginTop: 15,
     marginBottom: 10,
-    flex: 1,
+    flex: 1.2,
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center'

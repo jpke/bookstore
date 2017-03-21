@@ -86,19 +86,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   header: {
-    marginTop: 15,
+    marginTop: 18,
     marginBottom: 10,
-    flex: 2.2,
-    alignItems: 'center'
+    flex: 2.9,
+    alignItems: 'center',
+    justifyContent: 'flex-end'
   },
   title: {
     fontSize: 40,
-    flex: 1.5,
-    alignItems: 'flex-end',
+    flex: 1,
     color: '#ffcd67',
     textShadowColor: 'black',
     textShadowOffset: {width: 1, height: 1},
-    textShadowRadius: 4
+    textShadowRadius: 4,
+    borderColor: 'black',
+    borderWidth: 1,
   },
   subTitle: {
     fontSize: 30,
@@ -106,7 +108,8 @@ const styles = StyleSheet.create({
     color: '#fff',
     textShadowColor: 'black',
     textShadowOffset: {width: 1, height: 1},
-    textShadowRadius: 4
+    textShadowRadius: 4,
+    textAlign: 'center'
   },
   bookList: {
     flex: 6,

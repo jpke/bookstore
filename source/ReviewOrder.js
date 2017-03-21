@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   orderInfo: {
-    flex: 5,
+    flex: 4,
     width: 320,
   },
   itemHeader: {
@@ -248,8 +248,8 @@ const styles = StyleSheet.create({
   },
   homeButton: {
     backgroundColor: '#6799FF',
-    width: 80,
-    margin: 5,
+    width: 70,
+    margin: 3,
     paddingTop: 10,
     paddingBottom: 10,
     borderRadius: 10,

@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'flex-start',
-    marginTop: 10,
+    marginTop: 15,
   },
   selectedBook: {
     flex: 6,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   title: {
-    flex: 4,
+    flex: 3,
     fontSize: 40,
     color: '#ffcd67',
     textShadowColor: 'black',
@@ -134,8 +134,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
   input: {
-    flex: 1,
-    maxHeight: 70,
+    height: 45,
     width: 250,
     fontSize: 18,
     borderWidth: 1,
@@ -161,8 +160,8 @@ const styles = StyleSheet.create({
   },
   homeButton: {
     backgroundColor: '#6799FF',
-    width: 80,
-    margin: 1,
+    width: 70,
+    margin: 3,
     paddingTop: 10,
     paddingBottom: 10,
     borderRadius: 10,

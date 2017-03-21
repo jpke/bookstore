@@ -5,6 +5,7 @@ import { StyleSheet,
          Text,
          TextInput,
          TouchableHighlight,
+         ScrollView,
          Switch,
          View
        } from 'react-native';
@@ -55,39 +56,39 @@ class AddressInfo extends React.Component {
             <View style={{flex: 1}}></View>
           </View>
           <View style={styles.inputForm}>
-            <View style={styles.inputFormInnerContainer}>
-              <TextInput style={styles.input}
-                value={this.state.lineOne}
-                placeholder="Address Line One"
-                onChangeText={(text) => this.updateState(text, 'lineOne')}/>
-              <TextInput style={styles.input}
-                value={this.state.lineTwo}
-                placeholder="Address Line Two"
-                onChangeText={(text) => this.updateState(text, 'lineTwo')}/>
-              <TextInput style={styles.input}
-                value={this.state.city}
-                placeholder="City"
-                onChangeText={(text) => this.updateState(text, 'city')}/>
-              <TextInput style={styles.input}
-                value={this.state.state}
-                placeholder="State"
-                onChangeText={(text) => this.updateState(text, 'state')}/>
-              <TextInput style={styles.input}
-                value={this.state.zip}
-                placeholder="Zip"
-                onChangeText={(text) => this.updateState(text, 'zip')}/>
-              {this.props.addressType === 'Delivery' &&
-                <View style={styles.switchContainer}>
-                  <Text style={styles.switchLabel}>
-                    Use As Billing Address?
-                  </Text>
-                  <Switch onValueChange={(value) => this.setState({useAsBilling: value})}
-                    value={this.state.useAsBilling}
-                    tintColor='#fff'
-                    thumbTintColor='#6799FF'
-                  />
-                </View>}
-            </View>
+            <ScrollView style={styles.inputFormInnerContainer}>
+                <TextInput style={styles.input}
+                  value={this.state.lineOne}
+                  placeholder="Address Line One"
+                  onChangeText={(text) => this.updateState(text, 'lineOne')}/>
+                <TextInput style={styles.input}
+                  value={this.state.lineTwo}
+                  placeholder="Address Line Two"
+                  onChangeText={(text) => this.updateState(text, 'lineTwo')}/>
+                <TextInput style={styles.input}
+                  value={this.state.city}
+                  placeholder="City"
+                  onChangeText={(text) => this.updateState(text, 'city')}/>
+                <TextInput style={styles.input}
+                  value={this.state.state}
+                  placeholder="State"
+                  onChangeText={(text) => this.updateState(text, 'state')}/>
+                <TextInput style={styles.input}
+                  value={this.state.zip}
+                  placeholder="Zip"
+                  onChangeText={(text) => this.updateState(text, 'zip')}/>
+                {this.props.addressType === 'Delivery' &&
+                  <View style={styles.switchContainer}>
+                    <Text style={styles.switchLabel}>
+                      Use As Billing Address?
+                    </Text>
+                    <Switch onValueChange={(value) => this.setState({useAsBilling: value})}
+                      value={this.state.useAsBilling}
+                      tintColor='#fff'
+                      thumbTintColor='#6799FF'
+                    />
+                  </View>}
+            </ScrollView>
           </View>
         </View>
         <View style={styles.menu}>
@@ -148,7 +149,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   title: {
-    flex: 2,
+    flex: 3,
     fontSize: 40,
     color: '#ffcd67',
     textShadowColor: 'black',
@@ -161,9 +162,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
+  inputFormInnerContainer: {
+    flex: 1,
+  },
   input: {
     flex: 1,
-    maxHeight: 70,
+    height: 45,
     width: 250,
     fontSize: 18,
     borderWidth: 1,
@@ -196,8 +200,8 @@ const styles = StyleSheet.create({
   },
   homeButton: {
     backgroundColor: '#6799FF',
-    width: 80,
-    margin: 5,
+    width: 70,
+    margin: 3,
     paddingTop: 10,
     paddingBottom: 10,
     borderRadius: 10,
