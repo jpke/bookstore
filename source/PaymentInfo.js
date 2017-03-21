@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
   homeButton: {
     backgroundColor: '#6799FF',
     width: 80,
-    margin: 5,
+    margin: 1,
     paddingTop: 10,
     paddingBottom: 10,
     borderRadius: 10,

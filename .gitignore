@@ -1,3 +1,7 @@
 node_modules/
 .expo/
 npm-debug.*
+android/
+index.android.js
+index.ios.js
+ios/

@@ -1,24 +1,17 @@
 import React from 'react';
-// import { StyleSheet,
-//          Text,
-//          TouchableHighlight,
-//          View,
-//          Navigator
-//        } from 'react-native';
+import { Provider } from 'react-redux';
+import configureStore from './source/store';
 import Root from './source/Root';
 
+const store = configureStore();
 
 export default class App extends React.Component {
 
   render() {
    return (
-     <Root />
+     <Provider store={store}>
+       <Root />
+     </Provider>
    );
   }
 }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1
-//   }
-// });
