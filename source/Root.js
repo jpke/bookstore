@@ -151,23 +151,13 @@ class Root extends React.Component {
    if(route.name == 'AddressInfo') {
      return <AddressInfo navigator={navigator}
             addressType={route.option === 'delivery' ? 'Delivery' : 'Billing'}
-            address={route.option === 'delivery' ? this.props.deliveryAddress : this.props.billingAddress}
-            />
+            address={route.option === 'delivery' ? this.props.deliveryAddress : this.props.billingAddress} />
    }
    if(route.name == 'PaymentInfo') {
-     return <PaymentInfo navigator={navigator}
-            creditCardInfo={this.state.creditCardInfo}
-            submitInfo={this.submitInfo.bind(this)}/>
+     return <PaymentInfo navigator={navigator} />
    }
    if(route.name == 'ReviewOrder') {
-     return <ReviewOrder navigator={navigator}
-            userInfo={this.state.userInfo}
-            bookToOrder={this.state.bookToOrder}
-            creditCardInfo={this.state.creditCardInfo}
-            useDeliveryAddressAsBilling={this.state.useDeliveryAddressAsBilling}
-            billingAddress={this.state.billingAddress}
-            deliveryAddress={this.state.deliveryAddress}
-            submitInfo={this.submitInfo.bind(this)}/>
+     return <ReviewOrder navigator={navigator} />
    }
   }
   render() {

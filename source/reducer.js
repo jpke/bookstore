@@ -95,15 +95,15 @@ import * as types from './actionTypes';
         creditCardInfo: action.info
       };
     case types.SUBMIT_ORDER:
-      newOrder = action.info.slice();
+      newOrder = Object.assign({}, action.info);
       newOrder.date = new Date();
       orders = state.orders.concat(newOrder);
       books = state.availableBooks.slice();
       books = books.filter(book => book.title !== newOrder.title)
       return {
         ...state,
-        orders: action.orders,
-        availableBooks: action.books
+        orders: orders,
+        availableBooks: books
       };
 
     default:

@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {submitInfo} from './actions';
 import { StyleSheet,
          Text,
          TextInput,
@@ -6,7 +8,7 @@ import { StyleSheet,
          View
        } from 'react-native';
 
-export default class PaymentInfo extends React.Component {
+class PaymentInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -79,6 +81,23 @@ export default class PaymentInfo extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    creditCardInfo: state.creditCardInfo
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    submitInfo: (info, type, option) => dispatch(submitInfo(info, type, option))
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PaymentInfo);
 
 const styles = StyleSheet.create({
   container: {

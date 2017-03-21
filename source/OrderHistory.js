@@ -10,6 +10,7 @@ import formatAMPM from './dateFormatter';
 
 class OrderHistory extends React.Component {
   constructor(props) {
+    console.log("order props: ", props);
     super(props)
   }
   navigate(routeName) {
@@ -61,8 +62,9 @@ class OrderHistory extends React.Component {
 }
 
 function mapStateToProps(state) {
+  console.log("order state: ", state)
   return {
-    orders: state.orders,
+    orders: state.orders
   }
 }
 

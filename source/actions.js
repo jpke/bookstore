@@ -7,6 +7,21 @@ export function selectNewBook(newBook) {
   };
 }
 
+function deliveryAddress(info, useDeliveryAddressAsBilling) {
+  return {
+    type: types.DELIVERY,
+    info,
+    useDeliveryAddressAsBilling
+  }
+}
+
+function billingAddress(info) {
+  return {
+    type: types.BILLING,
+    info,
+  }
+}
+
 export function submitInfo(info, type, option) {
   if(type === 'AdminAddBook') {
     if(info.title === "" || info.author === "") return;
@@ -23,32 +38,15 @@ export function submitInfo(info, type, option) {
   }
   else if(type === 'Delivery') {
     //use delivery address as billing address?
-    option ?
-      function(dispatch) {
-        dispatch({
-          type: types.DELIVERY,
-          info,
-          useDeliveryAddressAsBilling: true
-        })
-        dispatch({
-          type: types.BILLING,
-          info,
-        })
-      }
-    :
-      function(dispatch) {
-        dispatch({
-          type: types.DELIVERY,
-          info,
-          useDeliveryAddressAsBilling: false
-        })
-      }
+    return function(dispatch) {
+      dispatch(deliveryAddress(info, option))
+      option && dispatch(billingAddress(info))
+    }
   }
   else if(type === 'Billing') {
-    return {
-      type: types.BILLING,
-      info
-    };
+    return function(dispatch) {
+      dispatch(billingAddress(info))
+    }
   }
   else if(type === 'PaymentInfo') {
     return {

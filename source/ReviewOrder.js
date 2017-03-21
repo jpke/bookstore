@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {submitInfo} from './actions';
 import { StyleSheet,
          ScrollView,
          Text,
@@ -7,7 +9,7 @@ import { StyleSheet,
          View
        } from 'react-native';
 
-export default class ReviewOrder extends React.Component {
+class ReviewOrder extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -130,6 +132,28 @@ export default class ReviewOrder extends React.Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    userInfo: state.userInfo,
+    bookToOrder: state.bookToOrder,
+    creditCardInfo: state.creditCardInfo,
+    useDeliveryAddressAsBilling: state.useDeliveryAddressAsBilling,
+    billingAddress: state.billingAddress,
+    deliveryAddress: state.deliveryAddress
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    submitInfo: (info, type, option) => dispatch(submitInfo(info, type, option))
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ReviewOrder);
 
 const styles = StyleSheet.create({
   container: {

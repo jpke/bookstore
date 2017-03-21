@@ -109,9 +109,10 @@ class AddressInfo extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
+  console.log("own props: ", ownProps);
   return {
-    test: "test"
+    placeholder: "",
   }
 }
 
