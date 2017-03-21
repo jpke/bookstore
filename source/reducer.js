@@ -78,6 +78,13 @@ import * as types from './actionTypes';
         ...state,
         userInfo: action.info
       };
+    case types.DELIVERY_AND_BILLING:
+      return {
+        ...state,
+        deliveryAddress: action.info,
+        billingAddress: action.info,
+        useDeliveryAddressAsBilling: action.useDeliveryAddressAsBilling
+      };
     case types.DELIVERY:
       return {
         ...state,

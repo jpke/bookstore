@@ -48,18 +48,20 @@ class PaymentInfo extends React.Component {
             <View style={{flex: 1}}></View>
           </View>
             <View style={styles.inputForm}>
-              <TextInput style={styles.input}
-                value={this.state.nameOnCard}
-                placeholder="Name on Card"
-                onChangeText={(text) => this.updateState(text, 'nameOnCard')}/>
-              <TextInput style={styles.input}
-                value={this.state.cardNumber}
-                placeholder="Card Number"
-                onChangeText={(text) => this.updateState(text, 'cardNumber')}/>
-              <TextInput style={styles.input}
-                value={this.state.securityCode}
-                placeholder="Security Code"
-                onChangeText={(text) => this.updateState(text, 'securityCode')}/>
+              <View style={styles.inputFormInnerContainer}>
+                <TextInput style={styles.input}
+                  value={this.state.nameOnCard}
+                  placeholder="Name on Card"
+                  onChangeText={(text) => this.updateState(text, 'nameOnCard')}/>
+                <TextInput style={styles.input}
+                  value={this.state.cardNumber}
+                  placeholder="Card Number"
+                  onChangeText={(text) => this.updateState(text, 'cardNumber')}/>
+                <TextInput style={styles.input}
+                  value={this.state.securityCode}
+                  placeholder="Security Code"
+                  onChangeText={(text) => this.updateState(text, 'securityCode')}/>
+              </View>
             </View>
         </View>
         <View style={styles.menu}>
@@ -129,7 +131,7 @@ const styles = StyleSheet.create({
   inputForm: {
     flex: 3,
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
   },
   input: {
     flex: 1,
@@ -139,7 +141,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ffcd67',
     backgroundColor: '#ffcd67',
-    margin: 1,
+    margin: 6,
     padding: 5,
     borderRadius: 5
   },

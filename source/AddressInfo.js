@@ -40,6 +40,7 @@ class AddressInfo extends React.Component {
     item === 'state' && this.setState({state: text});
     item === 'zip' && this.setState({zip: text});
   }
+
   render() {
     return (
       <View style={styles.container}>
@@ -54,37 +55,39 @@ class AddressInfo extends React.Component {
             <View style={{flex: 1}}></View>
           </View>
           <View style={styles.inputForm}>
-            <TextInput style={styles.input}
-              value={this.state.lineOne}
-              placeholder="Address Line One"
-              onChangeText={(text) => this.updateState(text, 'lineOne')}/>
-            <TextInput style={styles.input}
-              value={this.state.lineTwo}
-              placeholder="Address Line Two"
-              onChangeText={(text) => this.updateState(text, 'lineTwo')}/>
-            <TextInput style={styles.input}
-              value={this.state.city}
-              placeholder="City"
-              onChangeText={(text) => this.updateState(text, 'city')}/>
-            <TextInput style={styles.input}
-              value={this.state.state}
-              placeholder="State"
-              onChangeText={(text) => this.updateState(text, 'state')}/>
-            <TextInput style={styles.input}
-              value={this.state.zip}
-              placeholder="Zip"
-              onChangeText={(text) => this.updateState(text, 'zip')}/>
-            {this.props.addressType === 'Delivery' &&
-              <View style={styles.switchContainer}>
-                <Text style={styles.switchLabel}>
-                  Use As Billing Address?
-                </Text>
-                <Switch onValueChange={(value) => this.setState({useAsBilling: value})}
-                  value={this.state.useAsBilling}
-                  tintColor='#fff'
-                  thumbTintColor='#6799FF'
-                />
-              </View>}
+            <View style={styles.inputFormInnerContainer}>
+              <TextInput style={styles.input}
+                value={this.state.lineOne}
+                placeholder="Address Line One"
+                onChangeText={(text) => this.updateState(text, 'lineOne')}/>
+              <TextInput style={styles.input}
+                value={this.state.lineTwo}
+                placeholder="Address Line Two"
+                onChangeText={(text) => this.updateState(text, 'lineTwo')}/>
+              <TextInput style={styles.input}
+                value={this.state.city}
+                placeholder="City"
+                onChangeText={(text) => this.updateState(text, 'city')}/>
+              <TextInput style={styles.input}
+                value={this.state.state}
+                placeholder="State"
+                onChangeText={(text) => this.updateState(text, 'state')}/>
+              <TextInput style={styles.input}
+                value={this.state.zip}
+                placeholder="Zip"
+                onChangeText={(text) => this.updateState(text, 'zip')}/>
+              {this.props.addressType === 'Delivery' &&
+                <View style={styles.switchContainer}>
+                  <Text style={styles.switchLabel}>
+                    Use As Billing Address?
+                  </Text>
+                  <Switch onValueChange={(value) => this.setState({useAsBilling: value})}
+                    value={this.state.useAsBilling}
+                    tintColor='#fff'
+                    thumbTintColor='#6799FF'
+                  />
+                </View>}
+            </View>
           </View>
         </View>
         <View style={styles.menu}>
@@ -110,7 +113,6 @@ class AddressInfo extends React.Component {
 }
 
 function mapStateToProps(state, ownProps) {
-  console.log("own props: ", ownProps);
   return {
     placeholder: "",
   }
@@ -157,7 +159,7 @@ const styles = StyleSheet.create({
   inputForm: {
     flex: 3,
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
   },
   input: {
     flex: 1,
@@ -167,7 +169,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ffcd67',
     backgroundColor: '#ffcd67',
-    margin: 1,
+    margin: 6,
     padding: 5,
     borderRadius: 5
   },

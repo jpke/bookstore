@@ -7,19 +7,26 @@ export function selectNewBook(newBook) {
   };
 }
 
+function AdminAddBook(key, value) {
+  return {
+    type: types.ADMIN_ADD_BOOK,
+    value
+  };
+}
+
 function deliveryAddress(info, useDeliveryAddressAsBilling) {
   return {
     type: types.DELIVERY,
     info,
     useDeliveryAddressAsBilling
-  }
+  };
 }
 
 function billingAddress(info) {
   return {
     type: types.BILLING,
     info,
-  }
+  };
 }
 
 export function submitInfo(info, type, option) {
@@ -37,16 +44,27 @@ export function submitInfo(info, type, option) {
     };
   }
   else if(type === 'Delivery') {
-    //use delivery address as billing address?
-    return function(dispatch) {
-      dispatch(deliveryAddress(info, option))
-      option && dispatch(billingAddress(info))
+    if(option) {
+      //use delivery address as billing address
+      return {
+        type: types.DELIVERY_AND_BILLING,
+        info,
+        useDeliveryAddressAsBilling: option
+      };
+    }
+    else {
+      return {
+        type: types.DELIVERY,
+        info,
+        useDeliveryAddressAsBilling: option
+      };
     }
   }
   else if(type === 'Billing') {
-    return function(dispatch) {
-      dispatch(billingAddress(info))
-    }
+    return {
+      type: types.BILLING,
+      info,
+    };
   }
   else if(type === 'PaymentInfo') {
     return {
@@ -60,4 +78,5 @@ export function submitInfo(info, type, option) {
       info
     };
   }
+
 }
