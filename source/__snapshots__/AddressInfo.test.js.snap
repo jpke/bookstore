@@ -120,105 +120,109 @@ exports[`renders correctly in "Billing" view 1`] = `
         Object {
           "alignItems": "center",
           "flex": 3,
-          "justifyContent": "space-around",
+          "justifyContent": "flex-start",
         }
       }
     >
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="Address Line One"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
+      <View
+        style={undefined}
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Address Line One"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
           }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="Address Line Two"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Address Line Two"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
           }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="City"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="City"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
           }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="State"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="State"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
           }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="Zip"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Zip"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
           }
-        }
-        value=""
-      />
+          value=""
+        />
+      </View>
     </View>
   </View>
   <View
@@ -449,151 +453,155 @@ exports[`renders correctly in "Delivery" view 1`] = `
         Object {
           "alignItems": "center",
           "flex": 3,
-          "justifyContent": "space-around",
+          "justifyContent": "flex-start",
         }
       }
     >
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="Address Line One"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
-          }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="Address Line Two"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
-          }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="City"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
-          }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="State"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
-          }
-        }
-        value=""
-      />
-      <TextInput
-        onChangeText={[Function]}
-        placeholder="Zip"
-        style={
-          Object {
-            "backgroundColor": "#ffcd67",
-            "borderColor": "#ffcd67",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "flex": 1,
-            "fontSize": 18,
-            "margin": 1,
-            "maxHeight": 70,
-            "padding": 5,
-            "width": 250,
-          }
-        }
-        value=""
-      />
       <View
-        style={
-          Object {
-            "alignItems": "center",
-          }
-        }
+        style={undefined}
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Address Line One"
           style={
             Object {
-              "color": "#fff",
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
               "fontSize": 18,
-              "textAlign": "center",
-              "textShadowColor": "black",
-              "textShadowOffset": Object {
-                "height": 1,
-                "width": 1,
-              },
-              "textShadowRadius": 4,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Address Line Two"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="City"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="State"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Zip"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "margin": 6,
+              "maxHeight": 70,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
             }
           }
         >
-          Use As Billing Address?
-        </Text>
-        <RCTSwitch
-          disabled={false}
-          onChange={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          onValueChange={[Function]}
-          style={
-            Array [
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
               Object {
-                "height": 31,
-                "width": 51,
-              },
-              undefined,
-            ]
-          }
-          thumbTintColor="#6799FF"
-          tintColor="#fff"
-          value={false}
-        />
+                "color": "#fff",
+                "fontSize": 18,
+                "textAlign": "center",
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            Use As Billing Address?
+          </Text>
+          <RCTSwitch
+            disabled={false}
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onValueChange={[Function]}
+            style={
+              Array [
+                Object {
+                  "height": 31,
+                  "width": 51,
+                },
+                undefined,
+              ]
+            }
+            thumbTintColor="#6799FF"
+            tintColor="#fff"
+            value={false}
+          />
+        </View>
       </View>
     </View>
   </View>

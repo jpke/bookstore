@@ -178,9 +178,7 @@ exports[`renders correctly 1`] = `
                 "textShadowRadius": 4,
               }
             }
-          >
-            The Evolution of Civilizations
-          </Text>
+          />
           <Text
             accessible={true}
             allowFontScaling={true}
@@ -191,9 +189,7 @@ exports[`renders correctly 1`] = `
                 "padding": 5,
               }
             }
-          >
-            Carroll Quigley
-          </Text>
+          />
         </View>
       </View>
     </View>

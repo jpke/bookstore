@@ -1,24 +1,17 @@
 import React from 'react';
 import ReactNative from 'react-native';
-import OrderHistory from './OrderHistory';
-
 import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import configureStore from './store';
+const store = configureStore();
+
+import OrderHistory from './OrderHistory';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <OrderHistory
-      orders={[
-        {
-          title: "The Lexus and the Olive Tree",
-          author: "Thomas Friedman",
-          date: new Date("Sat Mar 18 2017 16:38:08 GMT-0400 (EDT)")
-        },
-        {
-          title: "Wit and Wisdom",
-          author: "Toby Reynolds",
-          date: new Date("Fri Mar 17 2017 16:40:30 GMT-0400 (EDT)")
-        }
-      ]}/>
+    <Provider store={store}>
+      <OrderHistory />
+    </Provider>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 })

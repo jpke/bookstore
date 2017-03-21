@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should handle ADMIN_ADD_BOOK 1`] = `
+Object {
+  "availableBooks": Array [
+    Object {
+      "author": "Carroll Quigley",
+      "title": "The Evolution of Civilizations",
+    },
+    Object {
+      "author": "Stephan Pinker",
+      "title": "How the Mind Works",
+    },
+    Object {
+      "author": "Famous Author",
+      "title": "New Book",
+    },
+  ],
+  "billingAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "bookToOrder": "",
+  "creditCardInfo": Object {
+    "cardNumber": "",
+    "nameOnCard": "",
+    "securityCode": "",
+  },
+  "deliveryAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "newBook": Object {
+    "author": "",
+    "title": "",
+  },
+  "orders": Array [
+    Object {
+      "author": "Thomas Friedman",
+      "date": 2017-03-18T20:38:08.000Z,
+      "title": "The Lexus and the Olive Tree",
+    },
+    Object {
+      "author": "Toby Reynolds",
+      "date": 2017-03-17T20:40:30.000Z,
+      "title": "Wit and Wisdom",
+    },
+  ],
+  "useDeliveryAddressAsBilling": false,
+  "userInfo": Object {
+    "email": "",
+    "firstName": "",
+    "lastName": "",
+  },
+}
+`;
+
+exports[`should handle SELECT_NEW_BOOK 1`] = `
+Object {
+  "availableBooks": Array [
+    Object {
+      "author": "Carroll Quigley",
+      "title": "The Evolution of Civilizations",
+    },
+    Object {
+      "author": "Stephan Pinker",
+      "title": "How the Mind Works",
+    },
+  ],
+  "billingAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "bookToOrder": Object {
+    "author": "Carroll Quigley",
+    "title": "The Evolution of Civilizations",
+  },
+  "creditCardInfo": Object {
+    "cardNumber": "",
+    "nameOnCard": "",
+    "securityCode": "",
+  },
+  "deliveryAddress": Object {
+    "city": "",
+    "lineOne": "",
+    "lineTwo": "",
+    "state": "",
+    "zip": "",
+  },
+  "newBook": Object {
+    "author": "",
+    "title": "",
+  },
+  "orders": Array [
+    Object {
+      "author": "Thomas Friedman",
+      "date": 2017-03-18T20:38:08.000Z,
+      "title": "The Lexus and the Olive Tree",
+    },
+    Object {
+      "author": "Toby Reynolds",
+      "date": 2017-03-17T20:40:30.000Z,
+      "title": "Wit and Wisdom",
+    },
+  ],
+  "useDeliveryAddressAsBilling": false,
+  "userInfo": Object {
+    "email": "",
+    "firstName": "",
+    "lastName": "",
+  },
+}
+`;

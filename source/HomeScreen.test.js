@@ -1,31 +1,17 @@
 import React from 'react';
 import ReactNative from 'react-native';
-import HomeScreen from './HomeScreen';
-
 import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import configureStore from './store';
+const store = configureStore();
 
-function selectNewBook(newBook) {
-  console.log("available book to order: ", newBook);
-  this.setState({
-    bookToOrder: newBook
-  })
-}
+import HomeScreen from './HomeScreen';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <HomeScreen
-      books={[
-        {
-          title: "The Evolution of Civilizations",
-          author: "Carroll Quigley",
-        },
-        {
-          title: "How the Mind Works",
-          author: "Stephan Pinker",
-
-        }
-      ]}
-      selectBook={selectNewBook}/>
+    <Provider store={store}>
+      <HomeScreen />
+    </Provider>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 })

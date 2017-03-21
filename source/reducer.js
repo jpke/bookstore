@@ -1,6 +1,6 @@
 import * as types from './actionTypes';
 
- const initialState = {
+export const initialState = {
    userInfo: {
      firstName: "",
      lastName: "",
@@ -41,12 +41,12 @@ import * as types from './actionTypes';
      {
        title: "The Lexus and the Olive Tree",
        author: "Thomas Friedman",
-       date: new Date()
+       date: new Date("Sat Mar 18 2017 16:38:08 GMT-0400 (EDT)")
      },
      {
        title: "Wit and Wisdom",
        author: "Toby Reynolds",
-       date: new Date(Date.now() - (1000*60*60*24))
+       date: new Date("Fri Mar 17 2017 16:40:30 GMT-0400 (EDT)")
      }
    ],
    bookToOrder: "",
@@ -68,7 +68,7 @@ import * as types from './actionTypes';
       bookToOrder: action.newBook
       };
     case types.ADMIN_ADD_BOOK:
-      books = state.availableBooks.concat(info);
+      books = state.availableBooks.concat(action.info);
       return {
         ...state,
         availableBooks: books
