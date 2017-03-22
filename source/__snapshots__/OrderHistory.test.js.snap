@@ -1,0 +1,318 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "marginBottom": 10,
+        "marginTop": 22,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffcd67",
+          "flex": 4,
+          "fontSize": 40,
+          "textAlign": "center",
+          "textShadowColor": "black",
+          "textShadowOffset": Object {
+            "height": 1,
+            "width": 1,
+          },
+          "textShadowRadius": 4,
+        }
+      }
+    >
+      Order History
+    </Text>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 5,
+        "justifyContent": "space-around",
+        "width": 320,
+      }
+    }
+  >
+    <ScrollView>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgba(255,205,103,0.8)",
+              "borderRadius": 5,
+              "flex": 1,
+              "marginBottom": 6,
+              "marginTop": 6,
+              "padding": 6,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 22,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            The Lexus and the Olive Tree
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 18,
+                "padding": 5,
+              }
+            }
+          >
+            Thomas Friedman
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 15,
+                "padding": 5,
+              }
+            }
+          >
+            Ordered 4:38 pm on Sat Mar 18 2017
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#dddddd",
+              "height": 1,
+            }
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgba(255,205,103,0.8)",
+              "borderRadius": 5,
+              "flex": 1,
+              "marginBottom": 6,
+              "marginTop": 6,
+              "padding": 6,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 22,
+                "padding": 5,
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            Wit and Wisdom
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 18,
+                "padding": 5,
+              }
+            }
+          >
+            Toby Reynolds
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "fontSize": 15,
+                "padding": 5,
+              }
+            }
+          >
+            Ordered 4:40 pm on Fri Mar 17 2017
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#dddddd",
+              "height": 1,
+            }
+          }
+        />
+      </View>
+    </ScrollView>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6799FF",
+            "borderRadius": 10,
+            "margin": 10,
+            "padding": 10,
+            "width": 150,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+          }
+        }
+      >
+        Back
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6799FF",
+            "borderRadius": 10,
+            "margin": 10,
+            "padding": 10,
+            "width": 150,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+          }
+        }
+      >
+        Home
+      </Text>
+    </View>
+  </View>
+</View>
+`;

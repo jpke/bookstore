@@ -1,0 +1,459 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Object {
+        "flex": 1,
+        "resizeMode": "cover",
+        "width": null,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "flex": 1,
+              "overflow": "hidden",
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "flex": 1,
+              "overflow": "hidden",
+            }
+          }
+        >
+          <View
+            collapsable={false}
+            onStartShouldSetResponderCapture={[Function]}
+            pointerEvents="auto"
+            style={
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "overflow": "hidden",
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "transform": Array [
+                    Object {
+                      "translateX": 0,
+                    },
+                    Object {
+                      "translateY": 0,
+                    },
+                    Object {
+                      "scaleX": 1,
+                    },
+                    Object {
+                      "scaleY": 1,
+                    },
+                    Object {
+                      "rotate": "0deg",
+                    },
+                    Object {
+                      "skewX": "0deg",
+                    },
+                    Object {
+                      "skewY": "0deg",
+                    },
+                  ],
+                },
+                null,
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "space-around",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 3,
+                    "marginBottom": 10,
+                    "marginTop": 15,
+                  }
+                }
+              >
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "color": "#ffcd67",
+                      "flex": 1,
+                      "fontSize": 40,
+                      "textShadowColor": "black",
+                      "textShadowOffset": Object {
+                        "height": 1,
+                        "width": 1,
+                      },
+                      "textShadowRadius": 4,
+                    }
+                  }
+                >
+                  Pocket BookStore
+                </Text>
+                <Text
+                  accessible={true}
+                  allowFontScaling={true}
+                  ellipsizeMode="tail"
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "flex": 1,
+                      "fontSize": 30,
+                      "textAlign": "center",
+                      "textShadowColor": "black",
+                      "textShadowOffset": Object {
+                        "height": 1,
+                        "width": 1,
+                      },
+                      "textShadowRadius": 4,
+                    }
+                  }
+                >
+                  Select from Available Books
+                </Text>
+              </View>
+              <View
+                style={
+                  Object {
+                    "flex": 6,
+                    "width": 320,
+                  }
+                }
+              >
+                <ScrollView
+                  style={
+                    Object {
+                      "flex": 6,
+                      "width": 320,
+                    }
+                  }
+                >
+                  <View>
+                    <View
+                      accessibilityComponentType={undefined}
+                      accessibilityLabel={undefined}
+                      accessibilityTraits={undefined}
+                      accessible={true}
+                      hasTVPreferredFocus={undefined}
+                      hitSlop={undefined}
+                      isTVSelectable={true}
+                      onLayout={undefined}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "transparent",
+                          },
+                          Object {
+                            "backgroundColor": "rgba(255,205,103,0.8)",
+                            "borderRadius": 5,
+                            "flex": 1,
+                            "marginBottom": 6,
+                            "marginTop": 6,
+                            "padding": 6,
+                          },
+                        ]
+                      }
+                      testID={undefined}
+                      tvParallaxProperties={undefined}
+                    >
+                      <View>
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "#fff",
+                              "fontSize": 22,
+                              "padding": 5,
+                              "textShadowColor": "black",
+                              "textShadowOffset": Object {
+                                "height": 1,
+                                "width": 1,
+                              },
+                              "textShadowRadius": 4,
+                            }
+                          }
+                        >
+                          The Evolution of Civilizations
+                        </Text>
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "fontSize": 18,
+                              "padding": 5,
+                            }
+                          }
+                        >
+                          Carroll Quigley
+                        </Text>
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#dddddd",
+                          "height": 1,
+                        }
+                      }
+                    />
+                  </View>
+                  <View>
+                    <View
+                      accessibilityComponentType={undefined}
+                      accessibilityLabel={undefined}
+                      accessibilityTraits={undefined}
+                      accessible={true}
+                      hasTVPreferredFocus={undefined}
+                      hitSlop={undefined}
+                      isTVSelectable={true}
+                      onLayout={undefined}
+                      onResponderGrant={[Function]}
+                      onResponderMove={[Function]}
+                      onResponderRelease={[Function]}
+                      onResponderTerminate={[Function]}
+                      onResponderTerminationRequest={[Function]}
+                      onStartShouldSetResponder={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "transparent",
+                          },
+                          Object {
+                            "backgroundColor": "rgba(255,205,103,0.8)",
+                            "borderRadius": 5,
+                            "flex": 1,
+                            "marginBottom": 6,
+                            "marginTop": 6,
+                            "padding": 6,
+                          },
+                        ]
+                      }
+                      testID={undefined}
+                      tvParallaxProperties={undefined}
+                    >
+                      <View>
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "color": "#fff",
+                              "fontSize": 22,
+                              "padding": 5,
+                              "textShadowColor": "black",
+                              "textShadowOffset": Object {
+                                "height": 1,
+                                "width": 1,
+                              },
+                              "textShadowRadius": 4,
+                            }
+                          }
+                        >
+                          How the Mind Works
+                        </Text>
+                        <Text
+                          accessible={true}
+                          allowFontScaling={true}
+                          ellipsizeMode="tail"
+                          style={
+                            Object {
+                              "fontSize": 18,
+                              "padding": 5,
+                            }
+                          }
+                        >
+                          Stephan Pinker
+                        </Text>
+                      </View>
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#dddddd",
+                          "height": 1,
+                        }
+                      }
+                    />
+                  </View>
+                </ScrollView>
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 1.5,
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                  }
+                }
+              >
+                <View
+                  accessibilityComponentType={undefined}
+                  accessibilityLabel={undefined}
+                  accessibilityTraits={undefined}
+                  accessible={true}
+                  hasTVPreferredFocus={undefined}
+                  hitSlop={undefined}
+                  isTVSelectable={true}
+                  onLayout={undefined}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                      },
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#6799FF",
+                        "borderRadius": 10,
+                        "margin": 5,
+                        "padding": 10,
+                        "width": 100,
+                      },
+                    ]
+                  }
+                  testID={undefined}
+                  tvParallaxProperties={undefined}
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": 18,
+                      }
+                    }
+                  >
+                    Orders
+                  </Text>
+                </View>
+                <View
+                  accessibilityComponentType={undefined}
+                  accessibilityLabel={undefined}
+                  accessibilityTraits={undefined}
+                  accessible={true}
+                  hasTVPreferredFocus={undefined}
+                  hitSlop={undefined}
+                  isTVSelectable={true}
+                  onLayout={undefined}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                      },
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#6799FF",
+                        "borderRadius": 10,
+                        "margin": 5,
+                        "padding": 10,
+                        "width": 100,
+                      },
+                    ]
+                  }
+                  testID={undefined}
+                  tvParallaxProperties={undefined}
+                >
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
+                    style={
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": 18,
+                      }
+                    }
+                  >
+                    Admin
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </Image>
+</View>
+`;

@@ -1,0 +1,714 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly in "Billing" view 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 6,
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "marginTop": 15,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#6799FF",
+                "borderRadius": 10,
+                "marginTop": 5,
+                "paddingBottom": 10,
+                "paddingTop": 10,
+                "width": 60,
+              },
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "fontSize": 18,
+              }
+            }
+          >
+            Home
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#ffcd67",
+            "flex": 3,
+            "fontSize": 40,
+            "textAlign": "center",
+            "textShadowColor": "black",
+            "textShadowOffset": Object {
+              "height": 1,
+              "width": 1,
+            },
+            "textShadowRadius": 4,
+          }
+        }
+      >
+        Billing address
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <ScrollView
+        style={undefined}
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Address Line One"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "height": 50,
+              "margin": 6,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Address Line Two"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "height": 50,
+              "margin": 6,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="City"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "height": 50,
+              "margin": 6,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="State"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "height": 50,
+              "margin": 6,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Zip"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "height": 50,
+              "margin": 6,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+      </ScrollView>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6799FF",
+            "borderRadius": 10,
+            "margin": 10,
+            "padding": 10,
+            "width": 150,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+          }
+        }
+      >
+        Back
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6799FF",
+            "borderRadius": 10,
+            "margin": 10,
+            "padding": 10,
+            "width": 150,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+          }
+        }
+      >
+        Next
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders correctly in "Delivery" view 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "space-around",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 6,
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+          "marginTop": 15,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#6799FF",
+                "borderRadius": 10,
+                "marginTop": 5,
+                "paddingBottom": 10,
+                "paddingTop": 10,
+                "width": 60,
+              },
+            ]
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#FFFFFF",
+                "fontSize": 18,
+              }
+            }
+          >
+            Home
+          </Text>
+        </View>
+      </View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#ffcd67",
+            "flex": 3,
+            "fontSize": 40,
+            "textAlign": "center",
+            "textShadowColor": "black",
+            "textShadowOffset": Object {
+              "height": 1,
+              "width": 1,
+            },
+            "textShadowRadius": 4,
+          }
+        }
+      >
+        Delivery address
+      </Text>
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 3,
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <ScrollView
+        style={undefined}
+      >
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Address Line One"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "height": 50,
+              "margin": 6,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Address Line Two"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "height": 50,
+              "margin": 6,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="City"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "height": 50,
+              "margin": 6,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="State"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "height": 50,
+              "margin": 6,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Zip"
+          style={
+            Object {
+              "backgroundColor": "#ffcd67",
+              "borderColor": "#ffcd67",
+              "borderRadius": 5,
+              "borderWidth": 1,
+              "flex": 1,
+              "fontSize": 18,
+              "height": 50,
+              "margin": 6,
+              "padding": 5,
+              "width": 250,
+            }
+          }
+          value=""
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#fff",
+                "fontSize": 18,
+                "textAlign": "center",
+                "textShadowColor": "black",
+                "textShadowOffset": Object {
+                  "height": 1,
+                  "width": 1,
+                },
+                "textShadowRadius": 4,
+              }
+            }
+          >
+            Use As Billing Address?
+          </Text>
+          <RCTSwitch
+            disabled={false}
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onValueChange={[Function]}
+            style={
+              Array [
+                Object {
+                  "height": 31,
+                  "width": 51,
+                },
+                undefined,
+              ]
+            }
+            thumbTintColor="#6799FF"
+            tintColor="#fff"
+            value={false}
+          />
+        </View>
+      </ScrollView>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+      }
+    }
+  >
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6799FF",
+            "borderRadius": 10,
+            "margin": 10,
+            "padding": 10,
+            "width": 150,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+          }
+        }
+      >
+        Back
+      </Text>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6799FF",
+            "borderRadius": 10,
+            "margin": 10,
+            "padding": 10,
+            "width": 150,
+          },
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "#FFFFFF",
+            "fontSize": 18,
+          }
+        }
+      >
+        Next
+      </Text>
+    </View>
+  </View>
+</View>
+`;

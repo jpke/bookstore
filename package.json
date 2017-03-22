@@ -21,6 +21,8 @@
   "dependencies": {
     "expo": "^15.0.0",
     "react": "~15.4.0",
-    "react-native": "0.42.3"
+    "react-native": "0.42.3",
+    "redux-immutable-state-invariant": "^2.0.0",
+    "redux-thunk": "^2.2.0"
   }
 }

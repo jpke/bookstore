@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create an action to add a new available book 1`] = `
+Object {
+  "info": Object {
+    "author": "Famous Author",
+    "title": "New Book",
+  },
+  "type": "ADMIN_ADD_BOOK",
+}
+`;
+
+exports[`should create an action to select a book 1`] = `
+Object {
+  "newBook": Object {
+    "author": "Carroll Quigley",
+    "title": "The Evolution of Civilizations",
+  },
+  "type": "SELECT_NEW_BOOK",
+}
+`;
+
+exports[`should create an action to update state with billing address 1`] = `
+Object {
+  "info": Object {
+    "city": "_",
+    "lineOne": "_",
+    "lineTwo": "_",
+    "state": "_",
+    "zip": "_",
+  },
+  "type": "BILLING",
+}
+`;
+
+exports[`should create an action to update state with delivery address 1`] = `
+Object {
+  "info": Object {
+    "city": "_",
+    "lineOne": "_",
+    "lineTwo": "_",
+    "state": "_",
+    "zip": "_",
+  },
+  "type": "DELIVERY",
+  "useDeliveryAddressAsBilling": false,
+}
+`;
+
+exports[`should create an action to update state with identical delivery and billing addresses 1`] = `
+Object {
+  "info": Object {
+    "city": "_",
+    "lineOne": "_",
+    "lineTwo": "_",
+    "state": "_",
+    "zip": "_",
+  },
+  "type": "DELIVERY_AND_BILLING",
+  "useDeliveryAddressAsBilling": true,
+}
+`;
+
+exports[`should create an action to update state with payment info 1`] = `
+Object {
+  "info": Object {
+    "cardNumber": "_",
+    "nameOnCard": "_",
+    "securityCode": "_",
+  },
+  "type": "PAYMENT_INFO",
+}
+`;
+
+exports[`should create an action to update state with submitted order 1`] = `
+Object {
+  "info": Object {
+    "author": "Carroll Quigley",
+    "date": 2017-03-18T20:38:08.000Z,
+    "title": "The Evolution of Civilizations",
+  },
+  "type": "SUBMIT_ORDER",
+}
+`;
+
+exports[`should create an action to update state with user info 1`] = `
+Object {
+  "info": Object {
+    "email": "_",
+    "firstName": "_",
+    "lastName": "_",
+  },
+  "type": "USER_INFO",
+}
+`;
